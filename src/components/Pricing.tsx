@@ -2,6 +2,7 @@ import { Check } from "lucide-react";
 import { VideoButton } from "./VideoModal";
 import { useState } from "react";
 import { VideoModal } from "./VideoModal";
+import { StripeCheckoutButton } from "./StripeCheckoutButton";
 
 const features = [
   "Telegram alerts",
@@ -58,7 +59,8 @@ const Pricing = () => {
             </ul>
             
             {/* CTA */}
-            <div className="w-full">
+            <div className="w-full space-y-3">
+              <StripeCheckoutButton className="w-full" />
               <VideoButton onClick={() => setShowVideo(true)} />
             </div>
             

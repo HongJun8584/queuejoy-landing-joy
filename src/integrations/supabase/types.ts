@@ -14,7 +14,80 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      sessions_map: {
+        Row: {
+          admin_token: string | null
+          created_at: string | null
+          id: string
+          session_id: string
+          tenant_slug: string | null
+        }
+        Insert: {
+          admin_token?: string | null
+          created_at?: string | null
+          id?: string
+          session_id: string
+          tenant_slug?: string | null
+        }
+        Update: {
+          admin_token?: string | null
+          created_at?: string | null
+          id?: string
+          session_id?: string
+          tenant_slug?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "sessions_map_tenant_slug_fkey"
+            columns: ["tenant_slug"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["slug"]
+          },
+        ]
+      }
+      tenants: {
+        Row: {
+          active: boolean | null
+          admin_token_hash: string
+          created_at: string | null
+          id: string
+          logo_url: string | null
+          plan: string | null
+          settings: Json | null
+          slug: string
+          stripe_customer_id: string | null
+          stripe_subscription_id: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          active?: boolean | null
+          admin_token_hash: string
+          created_at?: string | null
+          id?: string
+          logo_url?: string | null
+          plan?: string | null
+          settings?: Json | null
+          slug: string
+          stripe_customer_id?: string | null
+          stripe_subscription_id?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          active?: boolean | null
+          admin_token_hash?: string
+          created_at?: string | null
+          id?: string
+          logo_url?: string | null
+          plan?: string | null
+          settings?: Json | null
+          slug?: string
+          stripe_customer_id?: string | null
+          stripe_subscription_id?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

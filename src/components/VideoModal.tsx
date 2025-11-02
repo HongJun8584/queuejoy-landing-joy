@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
+import { StripeCheckoutButton } from "./StripeCheckoutButton";
 
 interface VideoModalProps {
   isOpen: boolean;
@@ -91,9 +92,9 @@ export const VideoModal = ({ isOpen, onClose, videoSrc }: VideoModalProps) => {
                 <h4 className="text-2xl font-bold mb-2">Would you like to purchase this system?</h4>
                 <p className="text-muted-foreground mb-6">Simple. Local. RM10 / month.</p>
                 <div className="flex gap-3 justify-center">
-                  <Button variant="hero" size="lg" onClick={handleBuyNow}>
+                  <StripeCheckoutButton>
                     Buy now
-                  </Button>
+                  </StripeCheckoutButton>
                   <Button variant="outline" size="lg" onClick={handleMaybeLater}>
                     Maybe later
                   </Button>
