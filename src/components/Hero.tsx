@@ -44,7 +44,7 @@ const Hero = () => {
             </p>
             
             <p className="text-lg text-muted-foreground/80 animate-fade-up" style={{ animationDelay: "0.15s" }}>
-              Cut waiting time. Calm the crowd. Notify customers instantly via Telegram. <span className="font-semibold text-foreground">RM10/month — no setup fuss.</span>
+              Turn your queue into a smart way to reach customers and keep them coming back — <span className="font-semibold text-foreground">only RM10/month, no setup, no hassle.</span>
             </p>
             
             {/* CTAs */}
