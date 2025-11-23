@@ -38,12 +38,19 @@ const Pricing = () => {
               Most Popular
             </div>
             
+            {/* Scarcity line */}
+            <div className="text-center mb-6">
+              <p className="text-sm text-accent font-semibold">
+                ⚡ Priority onboarding spots are limited this month
+              </p>
+            </div>
+            
             {/* Price */}
             <div className="text-center mb-8">
               <div className="text-7xl font-black mb-2">
                 <span className="text-gradient">RM10</span>
               </div>
-              <div className="text-muted-foreground text-lg font-medium">per month</div>
+              <div className="text-muted-foreground text-lg font-medium">per month · per site</div>
             </div>
             
             {/* Features */}
@@ -58,15 +65,25 @@ const Pricing = () => {
               ))}
             </ul>
             
-            {/* CTA */}
+            {/* Primary CTA */}
             <div className="w-full space-y-3">
-              <StripeCheckoutButton className="w-full" />
+              <StripeCheckoutButton className="w-full shadow-glow" />
               <VideoButton onClick={() => setShowVideo(true)} />
+            </div>
+            
+            {/* Guarantee */}
+            <div className="text-center mt-6 p-4 bg-accent/10 rounded-lg border border-accent/20">
+              <p className="text-sm font-semibold">
+                🛡️ 30-day money-back guarantee
+              </p>
+              <p className="text-xs text-muted-foreground mt-1">
+                If it doesn't cut wait times, get a full refund
+              </p>
             </div>
             
             {/* Legal note */}
             <p className="text-center text-sm text-muted-foreground mt-4">
-              No credit card needed for demo. Cancel anytime.
+              Cancel anytime · No long-term contracts
             </p>
           </div>
         </div>

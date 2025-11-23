@@ -1,130 +1,100 @@
-import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
 import { useState } from "react";
-import heroImage from "@/assets/hero-queue-telegram.png";
-import Toast from "./Toast";
-import { VideoModal } from "./VideoModal";
 import { StripeCheckoutButton } from "./StripeCheckoutButton";
+import { Button } from "./ui/button";
+import { Play } from "lucide-react";
+import heroAppMockup from "@/assets/hero-app-mockup.png";
+import { VideoModal } from "./VideoModal";
 
 const Hero = () => {
-  const [showToast, setShowToast] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
-
-  const handleDemoClick = () => {
-    window.open('https://queuejoy.netlify.app/', '_blank', 'noopener,noreferrer');
-    setShowToast(true);
-  };
 
   return (
     <>
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-background via-muted/30 to-background">
-        {showToast && (
-          <Toast
-            message="Demo opened in a new tab — try the live app!"
-            onClose={() => setShowToast(false)}
-          />
-        )}
-        
-        {/* Background decoration */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left content */}
-            <div className="space-y-8 animate-slide-up">
-              {/* Headline */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-up">
-                Queue Joy <span className="text-gradient">—</span> Smart queue, zero headaches
-              </h1>
-              
-              {/* Subheadline */}
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: "0.1s" }}>
-                QueueJoy transforms traditional slow queues into a modern, fast, and easy system—no expensive hardware or complicated setup needed. Staff can focus on service, not crowd control.
-              </p>
-              
-              <p className="text-lg text-muted-foreground/80 animate-fade-up" style={{ animationDelay: "0.15s" }}>
-                Turn your queue into a smart way to reach customers and keep them coming back — <span className="font-semibold text-foreground">only RM10/month, no setup, no hassle.</span>
-              </p>
-              
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 animate-scale-in" style={{ animationDelay: "0.2s" }}>
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-accent/10">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            {/* Left: Copy + CTAs */}
+            <div className="text-center lg:text-left space-y-8 animate-fade-up">
+              <div className="space-y-4">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
+                  Cut wait time.
+                  <br />
+                  <span className="text-gradient">Make money</span> while customers wait.
+                </h1>
+                <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
+                  No hardware. Works with Telegram. RM10/month. Setup in 10 minutes.
+                </p>
+              </div>
+
+              {/* Two CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <StripeCheckoutButton 
-                  variant="hero"
+                  variant="hero" 
                   size="lg"
-                  className="hover:scale-105 transition-transform"
-                >
-                  Buy Now — RM10/month
-                </StripeCheckoutButton>
-                <Button 
+                  className="text-lg px-8 py-6 shadow-glow"
+                />
+                <Button
                   variant="outline"
                   size="lg"
-                  onClick={handleDemoClick}
-                  className="hover:scale-105 transition-transform"
+                  onClick={() => setShowVideo(true)}
+                  className="text-lg px-8 py-6 border-2 group"
                 >
-                  Try Live Demo
+                  <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  Watch Demo
                 </Button>
               </div>
+
+              {/* Trust line */}
+              <p className="text-sm text-muted-foreground">
+                30-day money-back guarantee · Cancel anytime
+              </p>
+
+              {/* Micro-proof bullets */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                <div className="flex items-center gap-2 justify-center lg:justify-start">
+                  <div className="w-2 h-2 rounded-full bg-accent"></div>
+                  <span className="text-sm">Reduce wait by 40%</span>
+                </div>
+                <div className="flex items-center gap-2 justify-center lg:justify-start">
+                  <div className="w-2 h-2 rounded-full bg-accent"></div>
+                  <span className="text-sm">100+ businesses</span>
+                </div>
+                <div className="flex items-center gap-2 justify-center lg:justify-start">
+                  <div className="w-2 h-2 rounded-full bg-accent"></div>
+                  <span className="text-sm">No app needed</span>
+                </div>
+              </div>
             </div>
-            
-            {/* Right mockup */}
-            <div className="relative flex justify-center lg:justify-end animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <div 
-                className="relative cursor-pointer animate-float hover:scale-105 transition-transform duration-300"
-                onClick={handleDemoClick}
-              >
-                <img 
-                  src={heroImage} 
-                  alt="Queue management system with Telegram notifications" 
-                  className="w-full max-w-md lg:max-w-lg drop-shadow-2xl rounded-2xl"
-                  loading="eager"
+
+            {/* Right: Hero mockup */}
+            <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
+              <div className="relative mx-auto max-w-md lg:max-w-lg">
+                <img
+                  src={heroAppMockup}
+                  alt="QueueJoy app interface showing queue management"
+                  className="w-full h-auto drop-shadow-2xl hover-lift"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-3xl blur-2xl -z-10 animate-pulse" />
+                {/* Play button overlay */}
+                <button
+                  onClick={() => setShowVideo(true)}
+                  className="absolute inset-0 flex items-center justify-center group"
+                  aria-label="Play demo video"
+                >
+                  <div className="w-20 h-20 rounded-full bg-primary/90 backdrop-blur-sm flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform">
+                    <Play className="w-10 h-10 text-white fill-white ml-1" />
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Embedded Demo Video */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">See how Queue Joy works</h2>
-            <p className="text-muted-foreground">Watch how Queue Joy handles your customers automatically</p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl bg-black group">
-              <video
-                className="w-full h-full transition-transform duration-300 group-hover:scale-105"
-                controls
-                playsInline
-                preload="metadata"
-                poster="/demo/queuejoy-poster.jpg"
-                onMouseEnter={(e) => {
-                  const video = e.currentTarget;
-                  if (video.paused) {
-                    video.play().catch(() => {});
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  const video = e.currentTarget;
-                  if (!video.paused && video.currentTime < 3) {
-                    video.pause();
-                    video.currentTime = 0;
-                  }
-                }}
-              >
-                <source src="/demo/queuejoy-demo.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <VideoModal 
+        isOpen={showVideo} 
+        onClose={() => setShowVideo(false)} 
+        videoSrc="/demo/queuejoy-demo.mp4"
+      />
     </>
   );
 };
