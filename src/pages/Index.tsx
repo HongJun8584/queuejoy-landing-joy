@@ -45,10 +45,10 @@ const Index = () => {
         <div id="hero">
           <Hero />
         </div>
-        <ComparisonSection />
         <div id="demo">
           <DemoVideoSection />
         </div>
+        <ComparisonSection />
         <div id="about">
           <HowItWorks />
         </div>

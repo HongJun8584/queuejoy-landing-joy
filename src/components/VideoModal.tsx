@@ -69,15 +69,17 @@ export const VideoModal = ({ isOpen, onClose, videoSrc }: VideoModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-5xl p-0 bg-black">
-        <DialogHeader className="p-6 pb-2">
-          <DialogTitle className="text-2xl text-white">Watch How QueueJoy Works</DialogTitle>
+      <DialogContent className="sm:max-w-5xl p-0 bg-gradient-to-br from-background via-background to-primary/5">
+        <DialogHeader className="p-6 pb-2 bg-gradient-to-r from-primary/10 to-accent/10 border-b border-border/50">
+          <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Watch How QueueJoy Works
+          </DialogTitle>
         </DialogHeader>
         
-        <div className="relative">
+        <div className="relative p-4">
           <video
             ref={setVideoElement}
-            className="w-full rounded-b-lg"
+            className="w-full rounded-lg shadow-2xl border-2 border-primary/20"
             controls
             playsInline
             preload="metadata"
@@ -86,49 +88,6 @@ export const VideoModal = ({ isOpen, onClose, videoSrc }: VideoModalProps) => {
             <source src={videoSrc} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-
-          {/* Fixed CTA bar during playback - ONLY IN MIDDLE */}
-          {isPlaying && !showCta && (
-            <>
-              {/* Desktop - Right side */}
-              <div className="absolute right-4 top-1/2 -translate-y-1/2 hidden lg:block animate-fade-in">
-                <div className="bg-background/95 backdrop-blur-sm p-6 rounded-xl shadow-glow border-2 border-primary/30 max-w-xs">
-                  <p className="text-sm font-semibold mb-3 text-center">
-                    Ideas matter. Action matters more.
-                  </p>
-                  <StripeCheckoutButton size="default" className="w-full" />
-                </div>
-              </div>
-
-              {/* Mobile - Bottom */}
-              <div className="absolute bottom-20 left-0 right-0 lg:hidden animate-fade-in">
-                <div className="bg-background/95 backdrop-blur-sm p-4 mx-4 rounded-xl shadow-glow border-2 border-primary/30">
-                  <p className="text-xs font-semibold mb-2 text-center">
-                    Ideas matter. Action matters more.
-                  </p>
-                  <StripeCheckoutButton size="sm" className="w-full" />
-                </div>
-              </div>
-            </>
-          )}
-
-          {/* End CTA Overlay */}
-          {showCta && (
-            <div className="absolute inset-0 flex items-center justify-center bg-black/80 rounded-b-lg">
-              <div className="bg-background p-8 rounded-xl max-w-md mx-4 text-center shadow-glow">
-                <h4 className="text-2xl font-bold mb-2">Set up in 10 minutes. Cancel anytime.</h4>
-                <p className="text-muted-foreground mb-6">Join 100+ businesses cutting wait time today.</p>
-                <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                  <StripeCheckoutButton className="flex-1">
-                    Buy Now — RM10/month
-                  </StripeCheckoutButton>
-                  <Button variant="outline" size="lg" onClick={handleMaybeLater} className="flex-1">
-                    Maybe later
-                  </Button>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </DialogContent>
     </Dialog>

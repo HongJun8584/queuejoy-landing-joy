@@ -2,6 +2,7 @@ import { StripeCheckoutButton } from "./StripeCheckoutButton";
 import { Button } from "./ui/button";
 import { Play } from "lucide-react";
 import heroAppMockup from "@/assets/hero-app-mockup.png";
+import phoneMockupStarbucks from "@/assets/phone-mockup-starbucks.png";
 
 const Hero = () => {
   const scrollToDemo = () => {
@@ -75,8 +76,8 @@ const Hero = () => {
             <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
               <div className="relative mx-auto max-w-md lg:max-w-lg">
                 <img
-                  src={heroAppMockup}
-                  alt="QueueJoy app interface showing queue management"
+                  src={phoneMockupStarbucks}
+                  alt="QueueJoy Smart Queueing - Customer using Telegram interface"
                   className="w-full h-auto drop-shadow-2xl hover-lift"
                 />
               </div>

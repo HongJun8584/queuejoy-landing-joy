@@ -28,31 +28,36 @@ export const PostPaymentForm = ({ sessionId }: PostPaymentFormProps) => {
     setLoading(true);
 
     try {
-      // Here you would integrate with your Firebase/backend
-      // For now, we'll simulate the process
-      
       const slug = formData.slug.toLowerCase().replace(/[^a-z0-9-]/g, '-');
+      
+      // Call Supabase edge function to create business in Firebase
+      // This edge function will call your Firebase Realtime Database
+      const response = await fetch('/api/create-business', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          slug,
+          name: formData.businessName,
+          contactEmail: formData.contactEmail,
+          contactPhone: formData.contactPhone,
+          sessionId,
+          defaults: {
+            introText: `Welcome to ${formData.businessName}!`,
+            name: formData.businessName,
+            chatId: ''
+          }
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to create business');
+      }
+
+      const data = await response.json();
       const generatedUrl = `https://queuejoy.app/${slug}`;
       
-      // TODO: Call your createBusiness Netlify function here
-      // const response = await fetch('/.netlify/functions/createBusiness', {
-      //   method: 'POST',
-      //   headers: {
-      //     'x-master-key': 'YOUR_MASTER_KEY',
-      //     'Content-Type': 'application/json'
-      //   },
-      //   body: JSON.stringify({
-      //     slug,
-      //     name: formData.businessName,
-      //     defaults: {
-      //       introText: `Welcome to ${formData.businessName}!`,
-      //       chatId: ''
-      //     }
-      //   })
-      // });
-
-      await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate API call
-
       setBusinessUrl(generatedUrl);
       setSubmitted(true);
 
