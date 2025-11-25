@@ -1,12 +1,10 @@
-import { useState } from "react";
 import Hero from "@/components/Hero";
 import { ComparisonSection } from "@/components/ComparisonSection";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import { DemoVideoSection } from "@/components/DemoVideoSection";
 import ValueStats from "@/components/ValueStats";
-import AdsEngagement from "@/components/AdsEngagement";
-import Pricing from "@/components/Pricing";
+import { FeatureSections } from "@/components/FeatureSections";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -17,7 +15,6 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Index = () => {
   useScrollReveal();
-  const [currentLanguage, setCurrentLanguage] = useState("en");
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -35,11 +32,7 @@ const Index = () => {
 
   return (
     <>
-      <TopNav 
-        onSectionClick={scrollToSection}
-        onLanguageChange={setCurrentLanguage}
-        currentLanguage={currentLanguage}
-      />
+      <TopNav onSectionClick={scrollToSection} />
       
       <main className="min-h-screen pt-16">
         <div id="hero">
@@ -52,14 +45,11 @@ const Index = () => {
         <div id="about">
           <HowItWorks />
         </div>
+        <FeatureSections />
         <Features />
         <ValueStats />
-        <AdsEngagement />
         <div id="testimonials">
           <TestimonialsSection />
-        </div>
-        <div id="pricing">
-          <Pricing />
         </div>
         <FAQ />
         <div id="contact">

@@ -7,29 +7,29 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface TopNavProps {
   onSectionClick: (section: string) => void;
-  onLanguageChange: (lang: string) => void;
-  currentLanguage: string;
 }
 
-export const TopNav = ({ onSectionClick, onLanguageChange, currentLanguage }: TopNavProps) => {
+export const TopNav = ({ onSectionClick }: TopNavProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const languages = [
     { code: "en", name: "English" },
     { code: "ms", name: "Bahasa Melayu" },
-    { code: "zh", name: "简体中文" }
+    { code: "zh", name: "中文" }
   ];
 
   const navItems = [
-    { id: "hero", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "demo", label: "Demo" },
-    { id: "testimonials", label: "Testimonials" },
-    { id: "pricing", label: "Pricing" },
-    { id: "contact", label: "Contact" }
+    { id: "hero", label: t("nav.home") },
+    { id: "about", label: t("nav.about") },
+    { id: "demo", label: t("nav.demo") },
+    { id: "testimonials", label: t("nav.testimonials") },
+    { id: "pricing", label: t("nav.pricing") },
+    { id: "contact", label: t("nav.contact") }
   ];
 
   return (
@@ -61,14 +61,14 @@ export const TopNav = ({ onSectionClick, onLanguageChange, currentLanguage }: To
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="sm" className="gap-2">
                   <Globe className="w-4 h-4" />
-                  {languages.find(l => l.code === currentLanguage)?.name}
+                  {languages.find(l => l.code === language)?.name}
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {languages.map((lang) => (
                   <DropdownMenuItem
                     key={lang.code}
-                    onClick={() => onLanguageChange(lang.code)}
+                    onClick={() => setLanguage(lang.code as "en" | "ms" | "zh")}
                   >
                     {lang.name}
                   </DropdownMenuItem>
@@ -106,14 +106,14 @@ export const TopNav = ({ onSectionClick, onLanguageChange, currentLanguage }: To
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" size="sm" className="w-full gap-2">
                     <Globe className="w-4 h-4" />
-                    {languages.find(l => l.code === currentLanguage)?.name}
+                    {languages.find(l => l.code === language)?.name}
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   {languages.map((lang) => (
                     <DropdownMenuItem
                       key={lang.code}
-                      onClick={() => onLanguageChange(lang.code)}
+                      onClick={() => setLanguage(lang.code as "en" | "ms" | "zh")}
                     >
                       {lang.name}
                     </DropdownMenuItem>

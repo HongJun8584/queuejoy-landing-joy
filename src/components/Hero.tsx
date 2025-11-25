@@ -1,10 +1,12 @@
 import { StripeCheckoutButton } from "./StripeCheckoutButton";
 import { Button } from "./ui/button";
 import { Play } from "lucide-react";
-import heroAppMockup from "@/assets/hero-app-mockup.png";
 import phoneMockupStarbucks from "@/assets/phone-mockup-starbucks.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   const scrollToDemo = () => {
     const demoSection = document.getElementById("demo");
     if (demoSection) {
@@ -23,12 +25,10 @@ const Hero = () => {
             <div className="text-center lg:text-left space-y-8 animate-fade-up">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
-                  Cut wait time.
-                  <br />
-                  <span className="text-gradient">Make money</span> while customers wait.
+                  <span className="text-gradient">{t("hero.headline")}</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-                  No hardware. Works with Telegram. RM10/month. Setup in 10 minutes.
+                  {t("hero.subhead")}
                 </p>
               </div>
 
@@ -46,28 +46,28 @@ const Hero = () => {
                   className="text-lg px-8 py-6 border-2 group"
                 >
                   <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                  Watch Demo
+                  {t("hero.cta.demo")}
                 </Button>
               </div>
 
               {/* Trust line */}
               <p className="text-sm text-muted-foreground">
-                30-day money-back guarantee · Cancel anytime
+                {t("hero.trust")}
               </p>
 
               {/* Micro-proof bullets */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
                 <div className="flex items-center gap-2 justify-center lg:justify-start">
                   <div className="w-2 h-2 rounded-full bg-accent"></div>
-                  <span className="text-sm">Reduce wait by 40%</span>
+                  <span className="text-sm">{t("hero.benefit1")}</span>
                 </div>
                 <div className="flex items-center gap-2 justify-center lg:justify-start">
                   <div className="w-2 h-2 rounded-full bg-accent"></div>
-                  <span className="text-sm">100+ businesses</span>
+                  <span className="text-sm">{t("hero.benefit2")}</span>
                 </div>
                 <div className="flex items-center gap-2 justify-center lg:justify-start">
                   <div className="w-2 h-2 rounded-full bg-accent"></div>
-                  <span className="text-sm">No app needed</span>
+                  <span className="text-sm">{t("hero.benefit3")}</span>
                 </div>
               </div>
             </div>
