@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Sparkles, X, Play, ExternalLink, ShoppingCart, Instagram, Image } from "lucide-react";
+import { Sparkles, X, Play, ExternalLink, ShoppingCart } from "lucide-react";
 
 export const StickyClickMe = () => {
   const { t } = useLanguage();
@@ -52,28 +52,16 @@ export const StickyClickMe = () => {
       href: "https://queuejoy.netlify.app/admin.html",
       external: true
     },
-    { 
-      icon: Instagram, 
-      label: t("sticky.instagram"), 
-      href: "https://www.instagram.com/jun877731/",
-      external: true
-    },
-    { 
-      icon: Image, 
-      label: t("sticky.gallery"), 
-      href: "#demo",
-      primary: false
-    },
   ];
 
   return (
     <>
-      {/* Sticky Button - positioned to not overlap with other buttons */}
+      {/* Sticky Button */}
       <button
         onClick={() => setIsOpen(true)}
         aria-label="Quick actions"
         className={`
-          fixed bottom-24 right-6 z-40
+          fixed bottom-6 right-6 z-40
           w-14 h-14 md:w-16 md:h-16
           rounded-full bg-primary text-primary-foreground
           shadow-lg hover:shadow-xl
@@ -106,7 +94,7 @@ export const StickyClickMe = () => {
               </button>
             </div>
 
-            <div className="space-y-3 max-h-[60vh] overflow-y-auto">
+            <div className="space-y-3">
               {quickActions.map((action, index) => (
                 action.external ? (
                   <a

@@ -15,35 +15,8 @@ export const CounterPanelSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-background via-accent/5 to-background overflow-hidden scroll-reveal">
+    <section className="py-24 bg-gradient-to-br from-background via-accent/5 to-background overflow-hidden">
       <div className="container mx-auto px-4">
-        {/* Horizontal Video Highlight - Top and Center */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <div 
-            className="relative rounded-2xl overflow-hidden shadow-2xl bg-black cursor-pointer group"
-            onMouseEnter={(e) => {
-              const video = e.currentTarget.querySelector('video');
-              if (video) video.play();
-            }}
-            onMouseLeave={(e) => {
-              const video = e.currentTarget.querySelector('video');
-              if (video) {
-                video.pause();
-                video.currentTime = 0;
-              }
-            }}
-          >
-            <video
-              src="/demo/counter-demo.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
-
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content - Left side */}
           <div className="space-y-6">
@@ -91,9 +64,22 @@ export const CounterPanelSection = () => {
             </div>
           </div>
 
-          {/* Image - Right side - balanced size */}
+          {/* Media - Right side */}
           <div className="space-y-6">
-            <div className="rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto">
+            {/* Video - Landscape highlight at top */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-black">
+              <video
+                src="/demo/counter-demo.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-auto"
+              />
+            </div>
+            
+            {/* Landscape image */}
+            <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
                 src={counterPanelImg}
                 alt="Counter Management Panel"

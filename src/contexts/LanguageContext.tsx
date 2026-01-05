@@ -35,17 +35,8 @@ const translations: Record<Language, Record<string, string>> = {
     "metrics.setup": "Setup time",
     "metrics.price": "Per month only",
     
-    // Popup
-    "popup.headline": "Stop Losing Customers in Line",
-    "popup.body": "QueueJoy turns waiting into engagement. Fewer walk-aways. More repeat buyers. Instant setup.",
-    "popup.cta.buy": "🛒 Buy QueueJoy Now",
-    "popup.cta.demo": "Try Live Demo",
-    "popup.microcopy": "RM25/month · 30-day money-back · Cancel anytime",
-    
     // Sticky
     "sticky.title": "Quick Actions",
-    "sticky.instagram": "@jun877731",
-    "sticky.gallery": "Gallery",
     "sticky.buyNow": "Buy Now - RM25/month",
     "sticky.watchDemo": "Watch Demo",
     "sticky.status": "Status Page",
@@ -237,35 +228,15 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.pricing": "Harga",
     "nav.contact": "Hubungi",
     
-    // Nav
-    "nav.functions": "Fungsi",
-    
     // Hero
-    "hero.headline": "Mudahkan. Cepatkan. QueueJoy.",
+    "hero.headline": "Potong giliran. Kekalkan pelanggan.",
     "hero.subhead": "Tiada aplikasi — berfungsi dengan Telegram. Persediaan kurang dari 10 minit.",
-    "hero.cta.buy": "Beli Sekarang - RM25/bulan",
+    "hero.cta.buy": "Mula RM10/bulan",
     "hero.cta.demo": "Tonton demo 2 minit",
-    "hero.trust": "RM25/bulan · Jaminan wang kembali 30 hari · 100+ perniagaan · Batal bila-bila masa",
+    "hero.trust": "RM10/bulan · Jaminan wang kembali 30 hari · 100+ perniagaan · Batal bila-bila masa",
     "hero.benefit1": "Tiada aplikasi — DM Telegram segera",
     "hero.benefit2": "Perkhidmatan satu-ketukan — kurang keliru",
     "hero.benefit3": "Kedudukan masa nyata — 40% kurang tunggu",
-    
-    // Popup
-    "popup.headline": "Berhenti Kehilangan Pelanggan dalam Barisan",
-    "popup.body": "QueueJoy mengubah menunggu menjadi penglibatan. Kurang pelanggan pergi. Lebih pembeli berulang. Persediaan segera.",
-    "popup.cta.buy": "🛒 Beli QueueJoy Sekarang",
-    "popup.cta.demo": "Cuba Demo Langsung",
-    "popup.microcopy": "RM25/bulan · Jaminan wang kembali 30 hari · Batal bila-bila masa",
-    
-    // Sticky
-    "sticky.title": "Tindakan Pantas",
-    "sticky.buyNow": "Beli Sekarang - RM25/bulan",
-    "sticky.watchDemo": "Tonton Demo",
-    "sticky.status": "Halaman Status",
-    "sticky.counter": "Panel Kaunter",
-    "sticky.admin": "Papan Pemuka Pentadbir",
-    "sticky.instagram": "@jun877731",
-    "sticky.gallery": "Galeri",
     
     // Click Me Dialog (About QueueJoy)
     "clickme.button": "Klik Saya!",
@@ -403,35 +374,15 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.pricing": "价格",
     "nav.contact": "联系",
     
-    // Nav
-    "nav.functions": "功能",
-    
     // Hero
-    "hero.headline": "简单。快速。QueueJoy。",
+    "hero.headline": "缩短队列。留住客户。",
     "hero.subhead": "无需应用 — 通过Telegram运行。不到10分钟设置。",
-    "hero.cta.buy": "立即购买 - RM25/月",
+    "hero.cta.buy": "开始 RM10/月",
     "hero.cta.demo": "观看2分钟演示",
-    "hero.trust": "RM25/月 · 30天退款保证 · 100+企业 · 随时取消",
+    "hero.trust": "RM10/月 · 30天退款保证 · 100+企业 · 随时取消",
     "hero.benefit1": "无需应用 — 即时Telegram消息",
     "hero.benefit2": "一键服务 — 更少混乱",
     "hero.benefit3": "实时位置 — 减少40%等待",
-    
-    // Popup
-    "popup.headline": "停止在排队中失去客户",
-    "popup.body": "QueueJoy将等待变为参与。更少流失。更多回头客。即时设置。",
-    "popup.cta.buy": "🛒 立即购买QueueJoy",
-    "popup.cta.demo": "试用现场演示",
-    "popup.microcopy": "RM25/月 · 30天退款保证 · 随时取消",
-    
-    // Sticky
-    "sticky.title": "快速操作",
-    "sticky.buyNow": "立即购买 - RM25/月",
-    "sticky.watchDemo": "观看演示",
-    "sticky.status": "状态页面",
-    "sticky.counter": "柜台面板",
-    "sticky.admin": "管理仪表板",
-    "sticky.instagram": "@jun877731",
-    "sticky.gallery": "画廊",
     
     // Click Me Dialog (About QueueJoy)
     "clickme.button": "点我！",
