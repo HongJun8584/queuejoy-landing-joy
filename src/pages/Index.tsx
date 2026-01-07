@@ -47,16 +47,17 @@ const Index = () => {
         <div id="demo">
           <DemoVideoSection />
         </div>
+        {/* Industries + How It Works moved ABOVE Interactive Demo */}
+        <ComparisonSection />
+        <div id="about">
+          <HowItWorks />
+        </div>
         <InteractiveDemo />
         <div id="functions">
           <UserHomepageSection />
           <StatusPageSection />
           <CounterPanelSection />
           <AdminPanelSections />
-        </div>
-        <ComparisonSection />
-        <div id="about">
-          <HowItWorks />
         </div>
         <div id="testimonials">
           <TestimonialsSection />

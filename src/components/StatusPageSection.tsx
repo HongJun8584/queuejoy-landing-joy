@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "./ui/button";
 import { ExternalLink, Play, X, Bell, Smartphone, MessageCircle } from "lucide-react";
-import telegramLinkingImg from "@/assets/telegram-linking.png";
 
 export const StatusPageSection = () => {
   const { t } = useLanguage();
@@ -18,27 +17,32 @@ export const StatusPageSection = () => {
     <section className="py-24 bg-muted/30 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Media - Left side */}
-          <div className="space-y-6">
-            {/* Video - Landscape highlight at top */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-black">
+          {/* Media - Left side, video only, no image */}
+          <div>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-black group cursor-pointer"
+              onClick={() => setShowModal(true)}
+            >
               <video
                 src="/demo/status-notification-demo.mp4"
-                autoPlay
                 muted
                 loop
                 playsInline
-                className="w-full h-auto"
+                className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                onMouseEnter={(e) => {
+                  e.currentTarget.muted = false;
+                  e.currentTarget.play();
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.muted = true;
+                  e.currentTarget.pause();
+                  e.currentTarget.currentTime = 0;
+                }}
               />
-            </div>
-            
-            {/* Landscape image */}
-            <div className="rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src={telegramLinkingImg}
-                alt="Automatic Telegram Linking"
-                className="w-full h-auto hover:scale-105 transition-transform duration-500"
-              />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-100 group-hover:opacity-0 transition-opacity">
+                <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center">
+                  <Play className="w-8 h-8 text-white fill-white ml-1" />
+                </div>
+              </div>
             </div>
           </div>
 

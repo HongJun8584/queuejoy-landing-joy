@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "./ui/button";
-import { Bell, Users, ArrowRight, Check, Smartphone } from "lucide-react";
+import { Bell, Users, ArrowRight, Check, Smartphone, ExternalLink } from "lucide-react";
 
 export const InteractiveDemo = () => {
   const { t } = useLanguage();
@@ -44,9 +44,21 @@ export const InteractiveDemo = () => {
           <h2 className="text-4xl md:text-5xl font-black mb-4">
             {t("demo.title")}
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground mb-6">
             {t("demo.subtitle")}
           </p>
+          
+          {/* Live Demo Button */}
+          <Button 
+            size="lg" 
+            className="rounded-full shadow-glow"
+            asChild
+          >
+            <a href="https://queuejoy.netlify.app" target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="w-4 h-4 mr-2" />
+              {t("demo.liveDemo") || "Try Live Demo"}
+            </a>
+          </Button>
         </div>
 
         {/* Demo Interface */}

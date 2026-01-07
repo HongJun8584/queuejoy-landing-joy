@@ -64,21 +64,8 @@ export const CounterPanelSection = () => {
             </div>
           </div>
 
-          {/* Media - Right side */}
-          <div className="space-y-6">
-            {/* Video - Landscape highlight at top */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-black">
-              <video
-                src="/demo/counter-demo.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-auto"
-              />
-            </div>
-            
-            {/* Landscape image */}
+          {/* Media - Right side - Image only, no video */}
+          <div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
                 src={counterPanelImg}

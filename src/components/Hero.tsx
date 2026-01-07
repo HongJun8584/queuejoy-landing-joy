@@ -1,7 +1,7 @@
 import { StripeCheckoutButton } from "./StripeCheckoutButton";
 import { Button } from "./ui/button";
 import { Play } from "lucide-react";
-import heroQueueStatus from "@/assets/hero-queue-status.png";
+import heroPhoneMockup from "@/assets/hero-phone-mockup.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
@@ -76,7 +76,7 @@ const Hero = () => {
           <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
             <div className="relative mx-auto max-w-md lg:max-w-lg">
               <img
-                src={heroQueueStatus}
+                src={heroPhoneMockup}
                 alt="QueueJoy Smart Queueing - Live queue status on mobile"
                 className="w-full h-auto drop-shadow-2xl hover-lift"
               />

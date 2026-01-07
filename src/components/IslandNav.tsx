@@ -37,7 +37,8 @@ export const IslandNav = ({ onSectionClick }: IslandNavProps) => {
     { id: "functions", label: t("nav.functions") },
     { id: "demo", label: t("nav.demo") },
     { id: "pricing", label: t("nav.pricing") },
-    { id: "contact", label: t("nav.contact") }
+    { id: "contact", label: t("nav.contact") },
+    { id: "pricing", label: t("hero.cta.buy") || "Buy Now", isCta: true }
   ];
 
   return (

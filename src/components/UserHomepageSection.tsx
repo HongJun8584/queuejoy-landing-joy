@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "./ui/button";
 import { ExternalLink, Play, X } from "lucide-react";
-import userHomepageMockup from "@/assets/user-homepage-mockup.png";
 
 export const UserHomepageSection = () => {
   const { t } = useLanguage();
@@ -49,27 +48,32 @@ export const UserHomepageSection = () => {
             </div>
           </div>
 
-          {/* Media */}
-          <div className="order-1 lg:order-2 space-y-6">
-            {/* Video - Landscape highlight */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-black">
+          {/* Media - Video only, no image */}
+          <div className="order-1 lg:order-2">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-black group cursor-pointer"
+              onClick={() => setShowModal(true)}
+            >
               <video
                 src="/demo/user-homepage-demo.mp4"
-                autoPlay
                 muted
                 loop
                 playsInline
-                className="w-full h-auto"
+                className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                onMouseEnter={(e) => {
+                  e.currentTarget.muted = false;
+                  e.currentTarget.play();
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.muted = true;
+                  e.currentTarget.pause();
+                  e.currentTarget.currentTime = 0;
+                }}
               />
-            </div>
-            
-            {/* Phone mockup - Portrait */}
-            <div className="flex justify-center">
-              <img
-                src={userHomepageMockup}
-                alt="QueueJoy User Homepage"
-                className="max-w-[280px] h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-300"
-              />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-100 group-hover:opacity-0 transition-opacity">
+                <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center">
+                  <Play className="w-8 h-8 text-white fill-white ml-1" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
