@@ -20,14 +20,20 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.contact": "Contact",
     
     // Hero
-    "hero.headline": "Make It Easy. Make It Fast. Make It QueueJoy.",
-    "hero.subhead": "No app — works on Telegram. Setup in under 10 minutes.",
+    "hero.headline": "Short Waits, Long Loyalty",
+    "hero.subhead": "No app — works with Telegram. Setup in under 10 minutes.",
     "hero.cta.buy": "Buy Now - RM25/month",
     "hero.cta.demo": "Watch 2-min demo",
     "hero.trust": "RM25/month · 30-day money-back · 100+ businesses · Cancel anytime",
     "hero.benefit1": "No app install — instant Telegram DMs",
     "hero.benefit2": "One-tap service — less confusion",
     "hero.benefit3": "Real-time position — 40% less wait",
+    
+    // Demo
+    "demo.videoTitle": "Watch How QueueJoy Works",
+    "demo.videoSubtitle": "See the magic in action — 2 minutes that'll change how you think about queues",
+    "demo.clickToWatch": "Click to watch demo",
+    "demo.liveDemo": "Try Live Demo",
     
     // Metrics
     "metrics.waitTime": "Reduce wait time",

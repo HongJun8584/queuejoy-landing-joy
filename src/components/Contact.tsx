@@ -52,7 +52,7 @@ const Contact = () => {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nBusiness: ${formData.business}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
-    window.location.href = `mailto:jun877731@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:hello.queuejoy@gmail.com?subject=${subject}&body=${body}`;
     
     // Show confetti
     setShowConfetti(true);
@@ -189,16 +189,18 @@ const Contact = () => {
                   </div>
                 </a>
                 
-                <button 
-                  onClick={() => window.location.href = 'mailto:jun877731@gmail.com'}
+                <a 
+                  href="https://wa.me/60195055266"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full flex items-center gap-3 p-4 rounded-lg bg-background hover:shadow-primary transition-all duration-300 group"
                 >
                   <Mail className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
                   <div className="text-left">
-                    <div className="font-semibold">Contact Sales</div>
-                    <div className="text-sm text-muted-foreground">jun877731@gmail.com</div>
+                    <div className="font-semibold">Contact Sales (WhatsApp)</div>
+                    <div className="text-sm text-muted-foreground">019-505-5266 | hello.queuejoy@gmail.com</div>
                   </div>
-                </button>
+                </a>
               </div>
             </div>
             

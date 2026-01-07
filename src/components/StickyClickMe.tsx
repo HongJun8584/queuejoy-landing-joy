@@ -21,17 +21,39 @@ export const StickyClickMe = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToDemo = () => {
+    const demoSection = document.getElementById("demo");
+    if (demoSection) {
+      const offset = 80;
+      const elementPosition = demoSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
+    setIsOpen(false);
+  };
+
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById("pricing");
+    if (pricingSection) {
+      const offset = 80;
+      const elementPosition = pricingSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
+    setIsOpen(false);
+  };
+
   const quickActions = [
     { 
       icon: ShoppingCart, 
       label: t("sticky.buyNow"), 
-      href: "#pricing",
+      onClick: scrollToPricing,
       primary: true
     },
     { 
       icon: Play, 
       label: t("sticky.watchDemo"), 
-      href: "#demo",
+      onClick: scrollToDemo,
       primary: false
     },
     { 
@@ -54,14 +76,23 @@ export const StickyClickMe = () => {
     },
   ];
 
+  const clickMeContent = `Hi! I'm Hong Jun, 14, and I built QueueJoy to help businesses like yours save time and keep customers happy. I can even promote your business on my Instagram to reach more people.
+
+Benefits of QueueJoy:
+• No more long lines – let customers join your queue digitally
+• Keep your customers informed with real-time updates
+• Boost customer satisfaction and loyalty
+• Easily track visits and manage your queue
+• Promote your business directly to my Instagram audience`;
+
   return (
     <>
-      {/* Sticky Button */}
+      {/* Sticky Button - positioned to not overlap with AboutDialog */}
       <button
         onClick={() => setIsOpen(true)}
         aria-label="Quick actions"
         className={`
-          fixed bottom-6 right-6 z-40
+          fixed bottom-24 right-6 z-40
           w-14 h-14 md:w-16 md:h-16
           rounded-full bg-primary text-primary-foreground
           shadow-lg hover:shadow-xl
@@ -81,10 +112,10 @@ export const StickyClickMe = () => {
           onClick={() => setIsOpen(false)}
         >
           <div 
-            className="bg-card rounded-2xl w-full max-w-sm p-6 shadow-2xl animate-fade-in"
+            className="bg-card rounded-2xl w-full max-w-md p-6 shadow-2xl animate-fade-in max-h-[80vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-bold">{t("sticky.title")}</h3>
               <button 
                 onClick={() => setIsOpen(false)}
@@ -92,6 +123,11 @@ export const StickyClickMe = () => {
               >
                 <X className="w-5 h-5" />
               </button>
+            </div>
+
+            {/* Message from Hong Jun */}
+            <div className="mb-6 p-4 rounded-xl bg-primary/5 border border-primary/20">
+              <p className="text-sm text-muted-foreground whitespace-pre-line">{clickMeContent}</p>
             </div>
 
             <div className="space-y-3">
@@ -111,9 +147,9 @@ export const StickyClickMe = () => {
                     <span className="font-medium">{action.label}</span>
                   </a>
                 ) : (
-                  <a
+                  <button
                     key={index}
-                    href={action.href}
+                    onClick={action.onClick}
                     className={`
                       flex items-center gap-3 w-full p-3 rounded-xl transition-colors text-left
                       ${action.primary 
@@ -121,13 +157,12 @@ export const StickyClickMe = () => {
                         : "hover:bg-muted"
                       }
                     `}
-                    onClick={() => setIsOpen(false)}
                   >
                     <div className={`w-10 h-10 rounded-full flex items-center justify-center ${action.primary ? "bg-primary-foreground/20" : "bg-muted"}`}>
                       <action.icon className="w-5 h-5" />
                     </div>
                     <span className="font-medium">{action.label}</span>
-                  </a>
+                  </button>
                 )
               ))}
             </div>
