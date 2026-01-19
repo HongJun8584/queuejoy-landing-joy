@@ -1,31 +1,46 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-
-const faqs = [
-  {
-    question: "Do I need to install anything?",
-    answer: "No setup or sign-up needed. We handle everything for you — but you still have full control. Customize your logo, colors, and text anytime to match your brand."
-  },
-  {
-    question: "How do Telegram notifications work?",
-    answer: "You connect your Telegram bot in-app and we handle all the setup automatically. No API keys or technical knowledge required."
-  },
-  {
-    question: "How many counters can I have?",
-    answer: "Unlimited counters are supported. Our pricing is per site, so you can add as many counters as you need without extra charges."
-  }
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const FAQ = () => {
+  const { t } = useLanguage();
+
+  const faqs = [
+    {
+      question: t("faq.q1"),
+      answer: t("faq.a1")
+    },
+    {
+      question: t("faq.q2"),
+      answer: t("faq.a2")
+    },
+    {
+      question: t("faq.q3"),
+      answer: t("faq.a3")
+    },
+    {
+      question: t("faq.q4"),
+      answer: t("faq.a4")
+    },
+    {
+      question: t("faq.q5"),
+      answer: t("faq.a5")
+    },
+    {
+      question: t("faq.q6"),
+      answer: t("faq.a6")
+    }
+  ];
+
   return (
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Frequently asked <span className="text-gradient">questions</span>
+            {t("faq.title")} <span className="text-gradient">{t("faq.subtitle")}</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Everything you need to know about Queue Joy
+            {t("faq.description")}
           </p>
         </div>
         

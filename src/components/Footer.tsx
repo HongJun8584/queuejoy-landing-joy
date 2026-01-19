@@ -1,7 +1,10 @@
 import { Github } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
   
   return (
     <footer className="py-12 bg-muted/30 border-t border-border">
@@ -9,15 +12,15 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-gradient mb-2">Queue Joy</h3>
+            <h3 className="text-2xl font-bold text-gradient mb-2">QueueJoy</h3>
             <p className="text-muted-foreground">
-              Smart queue management for modern businesses
+              {t("footer.tagline")}
             </p>
           </div>
           
           {/* Links */}
           <div>
-            <h4 className="font-bold mb-4">Resources</h4>
+            <h4 className="font-bold mb-4">{t("footer.links")}</h4>
             <ul className="space-y-2">
               <li>
                 <a 
@@ -37,7 +40,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Documentation
+                  {t("footer.documentation")}
                 </a>
               </li>
               <li>
@@ -45,7 +48,7 @@ const Footer = () => {
                   href="#contact"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Contact
+                  {t("nav.contact")}
                 </a>
               </li>
             </ul>
@@ -53,17 +56,23 @@ const Footer = () => {
           
           {/* Legal */}
           <div>
-            <h4 className="font-bold mb-4">Legal</h4>
+            <h4 className="font-bold mb-4">{t("footer.legal")}</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Privacy Policy
-                </a>
+                <Link 
+                  to="/legal" 
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {t("footer.privacy")}
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Terms of Service
-                </a>
+                <Link 
+                  to="/legal" 
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {t("footer.terms")}
+                </Link>
               </li>
             </ul>
           </div>
@@ -71,7 +80,7 @@ const Footer = () => {
         
         {/* Bottom bar */}
         <div className="pt-8 border-t border-border text-center text-muted-foreground text-sm">
-          <p>© {currentYear} Queue Joy. All rights reserved.</p>
+          <p>© {currentYear} QueueJoy. {t("footer.rights")}</p>
         </div>
       </div>
     </footer>
