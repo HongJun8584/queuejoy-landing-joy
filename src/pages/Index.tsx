@@ -16,6 +16,7 @@ import Footer from "@/components/Footer";
 import AboutDialog from "@/components/AboutDialog";
 import { IslandNav } from "@/components/IslandNav";
 import { StickyClickMe } from "@/components/StickyClickMe";
+import { ReturnPopup } from "@/components/ReturnPopup";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Index = () => {
@@ -75,6 +76,7 @@ const Index = () => {
         <Footer />
         <AboutDialog />
         <StickyClickMe />
+        <ReturnPopup />
       </main>
     </>
   );
