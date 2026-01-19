@@ -538,7 +538,7 @@ const translations: Record<Language, Record<string, string>> = {
     "demo.waiting": "当前等待",
     "demo.callNext": "呼叫下一位",
     "demo.reset": "重置演示",
-    "demo.instructions": "试着点击"获取排号"再点击"呼叫下一位"来查看通知效果！",
+    "demo.instructions": "试着点击「获取排号」再点击「呼叫下一位」来查看通知效果！",
     
     // Sticky
     "sticky.title": "快速操作",
