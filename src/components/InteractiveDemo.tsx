@@ -54,7 +54,7 @@ export const InteractiveDemo = () => {
             className="rounded-full shadow-glow"
             asChild
           >
-            <a href="https://queuejoy.netlify.app" target="_blank" rel="noopener noreferrer">
+            <a href="https://queuejoy-live.netlify.app/index.html?slug=queuejoy-test-cafe-4" target="_blank" rel="noopener noreferrer">
               <ExternalLink className="w-4 h-4 mr-2" />
               {t("demo.liveDemo") || "Try Live Demo"}
             </a>

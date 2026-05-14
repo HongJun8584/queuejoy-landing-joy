@@ -54,7 +54,7 @@ export const VideoModal = ({ isOpen, onClose, videoSrc }: VideoModalProps) => {
   };
 
   const handleBuyNow = () => {
-    window.open('https://queuejoy.netlify.app/', '_blank', 'noopener,noreferrer');
+    window.open('https://queuejoy-live.netlify.app/index.html?slug=queuejoy-test-cafe-4/', '_blank', 'noopener,noreferrer');
   };
 
   const handleClose = () => {
