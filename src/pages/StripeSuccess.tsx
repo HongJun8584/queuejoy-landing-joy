@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
-// Configuration — production live domain
+// Configuration — production live domain (the deployed tenant app)
 const NETLIFY_BASE = "https://queuejoy-live.netlify.app";
 const SITE_BASE = NETLIFY_BASE;
 const buildStatusUrl = (s: string) => `${NETLIFY_BASE}/index.html?slug=${encodeURIComponent(s)}`;
