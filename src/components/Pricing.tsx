@@ -3,95 +3,89 @@ import { VideoButton } from "./VideoModal";
 import { useState } from "react";
 import { VideoModal } from "./VideoModal";
 import { StripeCheckoutButton } from "./StripeCheckoutButton";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const features = [
-  "Telegram alerts",
-  "Multi-counter support",
-  "Ads panel",
-  "Memory game",
-  "Real-time sync",
-  "Audio notifications",
-  "Regular updates"
-];
+const FEATURE_KEYS = [
+  "pricing.includes.telegram",
+  "pricing.feature.multiCounter",
+  "pricing.includes.counters",
+  "pricing.includes.analytics",
+  "pricing.includes.announcements",
+  "pricing.includes.support",
+] as const;
 
 const Pricing = () => {
   const [showVideo, setShowVideo] = useState(false);
+  const { t } = useLanguage();
 
   return (
-    <section className="py-24 bg-gradient-to-br from-primary/5 via-accent/5 to-background">
+    <section className="py-20 sm:py-24 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-4">
-        {/* Section header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Simple, <span className="text-gradient">transparent pricing</span>
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 animate-fade-up">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+            {t("pricing.title")}
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Everything you need, nothing you don't
+          <p className="text-lg sm:text-xl text-muted-foreground">
+            {t("pricing.subtitle")}
           </p>
         </div>
-        
-        {/* Pricing card */}
+
         <div className="max-w-lg mx-auto">
-          <div className="relative p-8 lg:p-12 rounded-2xl bg-card shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] border-2 border-primary/30 scroll-reveal hover-lift">
-            {/* Badge */}
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 rounded-full gradient-accent text-white text-sm font-bold shadow-glow">
-              Most Popular
+          <div className="relative p-6 sm:p-8 lg:p-12 rounded-2xl bg-card shadow-card border border-border scroll-reveal">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full bg-primary text-primary-foreground text-xs sm:text-sm font-semibold shadow-sm">
+              {t("pricing.popular")}
             </div>
-            
-            {/* Scarcity line */}
-            <div className="text-center mb-6">
-              <p className="text-sm text-accent font-semibold">
-                ⚡ Priority onboarding spots are limited this month
+
+            <div className="text-center mb-6 mt-2">
+              <p className="text-sm text-primary font-medium">
+                {t("pricing.scarcity")}
               </p>
             </div>
-            
-            {/* Price */}
+
             <div className="text-center mb-8">
-              <div className="text-7xl font-black mb-2">
-                <span className="text-gradient">RM10</span>
+              <div className="text-6xl sm:text-7xl font-black mb-2 text-foreground tracking-tight">
+                RM25
               </div>
-              <div className="text-muted-foreground text-lg font-medium">per month · per site</div>
+              <div className="text-muted-foreground text-base sm:text-lg font-medium">
+                {t("pricing.perMonth")}
+              </div>
             </div>
-            
-            {/* Features */}
-            <ul className="space-y-4 mb-8">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center">
-                    <Check className="w-4 h-4 text-accent" />
+
+            <ul className="space-y-3.5 mb-8">
+              {FEATURE_KEYS.map((key) => (
+                <li key={key} className="flex items-center gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Check className="w-4 h-4 text-primary" />
                   </div>
-                  <span className="text-lg">{feature}</span>
+                  <span className="text-base sm:text-lg">{t(key)}</span>
                 </li>
               ))}
             </ul>
-            
-            {/* Primary CTA */}
+
             <div className="w-full space-y-3">
-              <StripeCheckoutButton className="w-full shadow-glow" />
+              <StripeCheckoutButton className="w-full" />
               <VideoButton onClick={() => setShowVideo(true)} />
             </div>
-            
-            {/* Guarantee */}
-            <div className="text-center mt-6 p-4 bg-accent/10 rounded-lg border border-accent/20">
+
+            <div className="text-center mt-6 p-4 bg-muted/50 rounded-lg border border-border">
               <p className="text-sm font-semibold">
-                🛡️ 30-day money-back guarantee
+                🛡️ {t("pricing.guarantee")}
               </p>
               <p className="text-xs text-muted-foreground mt-1">
-                If it doesn't cut wait times, get a full refund
+                {t("pricing.guaranteeDesc")}
               </p>
             </div>
-            
-            {/* Legal note */}
+
             <p className="text-center text-sm text-muted-foreground mt-4">
-              Cancel anytime · No long-term contracts
+              {t("pricing.cancel")}
             </p>
           </div>
         </div>
       </div>
-      
-      <VideoModal 
-        isOpen={showVideo} 
-        onClose={() => setShowVideo(false)} 
+
+      <VideoModal
+        isOpen={showVideo}
+        onClose={() => setShowVideo(false)}
         videoSrc="/demo/queuejoy-demo.mp4"
       />
     </section>

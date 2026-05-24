@@ -269,7 +269,30 @@ const translations: Record<Language, Record<string, string>> = {
     "admin.demo.credentials.desc": "Use these demo credentials to log into the live admin panel. Tap to copy.",
     "admin.demo.credentials.email": "Email",
     "admin.demo.credentials.password": "Password",
+
+    // Ads & Engagement
+    "ads.title": "Ads & Engagement",
+    "ads.subtitle": "Turn waiting into opportunity",
+    "ads.promote.title": "Promote Your Business",
+    "ads.promote.item1.b": "Display your own promotions",
+    "ads.promote.item1.t": "or highlight special offers to customers while they wait",
+    "ads.promote.item2.b": "Sell ad space to partners",
+    "ads.promote.item2.t": "and generate extra revenue from idle screen time",
+    "ads.promote.item3.b": "Video support",
+    "ads.promote.item3.t": "Show videos, GIFs, and images",
+    "ads.engage.title": "Make Wait Time Fun",
+    "ads.engage.item1.b": "Interactive mini-games",
+    "ads.engage.item1.t": "Simple, fun games that work on any device",
+    "ads.engage.item2.b": "Reduce perceived wait",
+    "ads.engage.item2.t": "Keeps customers entertained, reducing wait perception by up to 40%",
+    "ads.engage.item3.b": "Boost customer experience",
+    "ads.engage.item3.t": "Engaging content keeps visitors focused on your brand, not the queue",
+
+    // Pricing extra
+    "pricing.popular": "Most Popular",
+    "pricing.scarcity": "⚡ Priority onboarding spots are limited this month",
   },
+
   ms: {
     // Nav
     "nav.home": "Laman Utama",
@@ -522,6 +545,27 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.send": "Hantar Mesej",
     "contact.trustedTitle": "Dipercayai & Selamat",
     "contact.trustedDesc": "Menggunakan backend Firebase yang selamat. Semua kunci disimpan di pelayan. Data anda dilindungi.",
+
+    // Ads & Engagement
+    "ads.title": "Iklan & Penglibatan",
+    "ads.subtitle": "Jadikan masa menunggu sebagai peluang",
+    "ads.promote.title": "Promosikan Perniagaan Anda",
+    "ads.promote.item1.b": "Paparkan promosi anda sendiri",
+    "ads.promote.item1.t": "atau serlahkan tawaran istimewa kepada pelanggan semasa mereka menunggu",
+    "ads.promote.item2.b": "Jual ruang iklan kepada rakan kongsi",
+    "ads.promote.item2.t": "dan jana pendapatan tambahan daripada masa skrin yang terbiar",
+    "ads.promote.item3.b": "Sokongan video",
+    "ads.promote.item3.t": "Tunjuk video, GIF dan gambar",
+    "ads.engage.title": "Jadikan Masa Menunggu Menyeronokkan",
+    "ads.engage.item1.b": "Permainan mini interaktif",
+    "ads.engage.item1.t": "Permainan ringkas dan menyeronokkan untuk semua peranti",
+    "ads.engage.item2.b": "Kurangkan persepsi menunggu",
+    "ads.engage.item2.t": "Hiburan untuk pelanggan, mengurangkan persepsi menunggu sehingga 40%",
+    "ads.engage.item3.b": "Tingkatkan pengalaman pelanggan",
+    "ads.engage.item3.t": "Kandungan menarik mengekalkan tumpuan pada jenama anda, bukan barisan",
+
+    "pricing.popular": "Paling Popular",
+    "pricing.scarcity": "⚡ Slot onboarding keutamaan terhad bulan ini",
   },
   zh: {
     // Nav
@@ -773,8 +817,29 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.email": "电子邮件",
     "contact.message": "告诉我们你的需求",
     "contact.send": "发送信息",
-    "contact.trustedTitle": "受信赖与安全",
-    "contact.trustedDesc": "使用安全的 Firebase 后端。所有密钥保存在服务器端。你的数据受保护。",
+    "contact.trustedTitle": "可靠与安全",
+    "contact.trustedDesc": "采用安全的 Firebase 后端。所有密钥保存在服务器端，您的数据受到保护。",
+
+    // Ads & Engagement
+    "ads.title": "广告与互动",
+    "ads.subtitle": "把等待变成商机",
+    "ads.promote.title": "宣传你的业务",
+    "ads.promote.item1.b": "展示你自己的促销",
+    "ads.promote.item1.t": "或在顾客等待时突出特别优惠",
+    "ads.promote.item2.b": "向合作伙伴出售广告位",
+    "ads.promote.item2.t": "把闲置的屏幕时间变成额外收入",
+    "ads.promote.item3.b": "支持视频",
+    "ads.promote.item3.t": "可播放视频、GIF 和图片",
+    "ads.engage.title": "让等待变得有趣",
+    "ads.engage.item1.b": "互动小游戏",
+    "ads.engage.item1.t": "简单有趣，适用于任何设备",
+    "ads.engage.item2.b": "减少等待感",
+    "ads.engage.item2.t": "让顾客保持兴趣，等待感最多可降低 40%",
+    "ads.engage.item3.b": "提升顾客体验",
+    "ads.engage.item3.t": "精彩内容让顾客专注于你的品牌，而非排队本身",
+
+    "pricing.popular": "最受欢迎",
+    "pricing.scarcity": "⚡ 本月优先入驻名额有限",
   },
 };
 

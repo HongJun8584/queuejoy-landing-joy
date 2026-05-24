@@ -1,86 +1,99 @@
 import adsImage from "@/assets/ads-engagement.png";
 import memoryGameImage from "@/assets/memory-game.png";
 import { DollarSign, Gamepad2, Video } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const AdsEngagement = () => {
+  const { t } = useLanguage();
+
+  const promoteItems = [
+    { key: "ads.promote.item1", icon: null },
+    { key: "ads.promote.item2", icon: null },
+    { key: "ads.promote.item3", icon: Video },
+  ];
+
+  const engageItems = [
+    { key: "ads.engage.item1" },
+    { key: "ads.engage.item2" },
+    { key: "ads.engage.item3" },
+  ];
+
   return (
-    <section className="py-24 bg-gradient-to-br from-background via-accent/5 to-primary/5">
+    <section className="py-20 sm:py-24 bg-muted/20">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Ads & Engagement
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 animate-fade-up">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+            {t("ads.title")}
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Turn waiting into opportunity
+          <p className="text-lg sm:text-xl text-muted-foreground">
+            {t("ads.subtitle")}
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Ads Panel - Updated */}
-          <div className="scroll-reveal hover-lift">
-            <div className="bg-card rounded-2xl shadow-xl overflow-hidden border border-border/50">
-              <div className="aspect-video overflow-hidden">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+          <div className="scroll-reveal">
+            <div className="bg-card rounded-2xl shadow-card overflow-hidden border border-border h-full">
+              <div className="aspect-video overflow-hidden bg-muted">
                 <img
                   src={adsImage}
-                  alt="Digital advertisement display showing promotional content"
+                  alt={t("ads.promote.title")}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full gradient-accent flex items-center justify-center shadow-glow">
-                    <DollarSign className="w-6 h-6 text-white" />
+                  <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <DollarSign className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-bold">Promote Your Business</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold">{t("ads.promote.title")}</h3>
                 </div>
                 <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span><strong>Display your own promotions</strong> or highlight special offers to customers while they wait</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span><strong>Sell ad space to partners</strong> and generate extra revenue from idle screen time</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Video className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span><strong>Video support</strong> — Show videos, GIFs, and images</span>
-                  </li>
+                  {promoteItems.map(({ key, icon: Icon }) => (
+                    <li key={key} className="flex items-start gap-2.5">
+                      {Icon ? (
+                        <Icon className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      ) : (
+                        <span className="text-primary mt-1.5 flex-shrink-0">•</span>
+                      )}
+                      <span className="text-sm sm:text-base">
+                        <strong className="text-foreground">{t(`${key}.b`)}</strong>{" "}
+                        {t(`${key}.t`)}
+                      </span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
           </div>
 
-          {/* Customer Engagement - Updated */}
-          <div className="scroll-reveal hover-lift" style={{ animationDelay: "0.2s" }}>
-            <div className="bg-card rounded-2xl shadow-xl overflow-hidden border border-border/50">
-              <div className="aspect-video overflow-hidden">
+          <div className="scroll-reveal" style={{ animationDelay: "0.15s" }}>
+            <div className="bg-card rounded-2xl shadow-card overflow-hidden border border-border h-full">
+              <div className="aspect-video overflow-hidden bg-muted">
                 <img
                   src={memoryGameImage}
-                  alt="Interactive mini-games for customer engagement"
+                  alt={t("ads.engage.title")}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full gradient-primary flex items-center justify-center shadow-glow">
-                    <Gamepad2 className="w-6 h-6 text-white" />
+                  <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Gamepad2 className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-bold">Make Wait Time Fun</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold">{t("ads.engage.title")}</h3>
                 </div>
                 <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span><strong>Interactive mini-games</strong> — Simple, fun games that work on any device</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span><strong>Reduce perceived wait</strong> — Keeps customers entertained and happy, reducing wait time perception by up to 40%</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span><strong>Boost customer experience</strong> — Engaging content keeps visitors focused on your brand, not the queue</span>
-                  </li>
+                  {engageItems.map(({ key }) => (
+                    <li key={key} className="flex items-start gap-2.5">
+                      <span className="text-primary mt-1.5 flex-shrink-0">•</span>
+                      <span className="text-sm sm:text-base">
+                        <strong className="text-foreground">{t(`${key}.b`)}</strong>{" "}
+                        {t(`${key}.t`)}
+                      </span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
