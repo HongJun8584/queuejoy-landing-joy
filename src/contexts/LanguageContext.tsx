@@ -408,14 +408,14 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.contact": "Hubungi",
     
     // Hero
-    "hero.headline": "Menunggu Singkat, Kesetiaan Lama",
-    "hero.subhead": "Tiada aplikasi — berfungsi dengan Telegram. Sediakan dalam masa kurang 3 minit.",
-    "hero.cta.buy": "Beli Sekarang - RM25/bulan",
-    "hero.cta.demo": "Tonton demo 2 minit",
-    "hero.trust": "RM25/bulan · Jaminan wang kembali 30 hari · 100+ perniagaan · Batal bila-bila masa",
-    "hero.benefit1": "Tiada pemasangan aplikasi — DMs Telegram serta-merta",
-    "hero.benefit2": "Perkhidmatan satu ketik — kurang kekeliruan",
-    "hero.benefit3": "Status posisi masa nyata — kurangkan masa menunggu 40%",
+    "hero.headline": "Menunggu Singkat. Kesetiaan Panjang.",
+    "hero.subhead": "Beri setiap pelanggan pengalaman beratur tanpa sentuh dan masa nyata — kemas kini kedudukan langsung, amaran Telegram automatik dan pengumuman segera yang menjadikan masa menunggu lebih tenang dan profesional untuk jenama anda.",
+    "hero.cta.buy": "Mulakan Sistem Giliran Saya — RM25/bulan",
+    "hero.cta.demo": "Lihat ia berfungsi dalam 2 minit",
+    "hero.trust": "RM25/bulan · Jaminan wang dikembalikan 30 hari · Dipercayai 100+ perniagaan · Batal bila-bila masa",
+    "hero.benefit1": "Daftar masuk tanpa sentuh melalui Telegram — tiada aplikasi diperlukan",
+    "hero.benefit2": "Kedudukan langsung membuatkan pelanggan tenang dan dimaklumkan",
+    "hero.benefit3": "40% kurang rasa menunggu — kurang soalan “berapa lama lagi?”",
     
     // Metrics
     "metrics.waitTime": "Kurangkan masa menunggu",
