@@ -457,8 +457,8 @@ const translations: Record<Language, Record<string, string>> = {
     "sticky.admin": "Papan Pemuka Pentadbir",
     
     // Comparison
-    "comparison.title": "Industri — hasil sebenar, kemenangan cepat",
-    "comparison.subtitle": "Ubah menunggu dari liabiliti kepada kelebihan",
+    "comparison.title": "Dibina untuk setiap perniagaan yang melayan pelanggan menunggu",
+    "comparison.subtitle": "Salun, klinik, restoran, bengkel, kaunter perkhidmatan — lihat saat tepat QueueJoy mengubah menunggu menjadi pengalaman yang lebih lancar dan setia.",
     "comparison.description": "Lihat perbezaan QueueJoy mengikut industri",
     "comparison.old": "Cara Lama",
     "comparison.new": "Cara QueueJoy",
