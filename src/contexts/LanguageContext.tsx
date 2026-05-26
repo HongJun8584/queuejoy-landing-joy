@@ -20,14 +20,14 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.contact": "Contact",
     
     // Hero
-    "hero.headline": "Short Waits, Long Loyalty",
-    "hero.subhead": "No app — works with Telegram. Setup in under 3 minutes.",
-    "hero.cta.buy": "Buy Now - RM25/month",
-    "hero.cta.demo": "Watch 2-min demo",
-    "hero.trust": "RM25/month · 30-day money-back · 100+ businesses · Cancel anytime",
-    "hero.benefit1": "No app install — instant Telegram DMs",
-    "hero.benefit2": "One-tap service — less confusion",
-    "hero.benefit3": "Real-time position — 40% less wait",
+    "hero.headline": "Short Waits. Long Loyalty.",
+    "hero.subhead": "Give every customer a zero-contact, real-time queue experience — live position updates, automatic Telegram alerts, and instant announcements that turn waiting into a calmer, more professional moment for your brand.",
+    "hero.cta.buy": "Start My Queue System — RM25/month",
+    "hero.cta.demo": "See it work in 2 minutes",
+    "hero.trust": "RM25/month · 30-day money-back · Trusted by 100+ businesses · Cancel anytime",
+    "hero.benefit1": "Zero-contact check-in via Telegram — no app to install",
+    "hero.benefit2": "Live position keeps customers calm and informed",
+    "hero.benefit3": "40% less perceived wait — fewer “how long?” questions",
     
     // Metrics
     "metrics.waitTime": "Reduce wait time",
