@@ -130,8 +130,8 @@ const translations: Record<Language, Record<string, string>> = {
     "admin.liveDemo": "Live Demo",
     
     // Comparison
-    "comparison.title": "Industries — real results, fast wins",
-    "comparison.subtitle": "Turn waiting from a liability into an advantage",
+    "comparison.title": "Built for every business where waiting matters",
+    "comparison.subtitle": "Salons, clinics, restaurants, workshops, service counters — see the exact moments QueueJoy turns waiting into a smoother, more loyal experience.",
     "comparison.description": "See the difference QueueJoy makes across industries",
     "comparison.old": "Old Way",
     "comparison.new": "QueueJoy Way",
