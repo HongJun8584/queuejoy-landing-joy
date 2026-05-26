@@ -241,7 +241,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.trustedDesc": "Uses secure Firebase backend. All secrets are kept server-side. Your data is protected.",
     
     // Footer
-    "footer.tagline": "Smart queue management for modern businesses",
+    "footer.tagline": "The customer experience platform that turns waiting into loyalty.",
     "footer.links": "Resources",
     "footer.documentation": "Documentation",
     "footer.legal": "Legal",
