@@ -887,7 +887,7 @@ const translations: Record<Language, Record<string, string>> = {
     "faq.a6": "大多数企业在3分钟内上线。只需订阅，创建您的网站，然后开始。",
     
     // Footer
-    "footer.tagline": "面向现代商家的智能排队管理",
+    "footer.tagline": "把等待变成忠诚的顾客体验平台。",
     "footer.links": "资源",
     "footer.documentation": "文档",
     "footer.legal": "法律",
