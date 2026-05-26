@@ -786,14 +786,14 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.contact": "联系我们",
     
     // Hero
-    "hero.headline": "短等待，长回头",
-    "hero.subhead": "无需安装应用 — 与 Telegram 配合使用。3分钟内完成设置。",
-    "hero.cta.buy": "立即购买 - RM25/月",
-    "hero.cta.demo": "观看 2 分钟演示",
-    "hero.trust": "RM25/月 · 30 天退款保证 · 100+ 商家 · 随时取消",
-    "hero.benefit1": "无需安装任何应用 — 即刻收到 Telegram 私信",
-    "hero.benefit2": "一键服务 — 更少混乱",
-    "hero.benefit3": "实时排队状态 — 等候时间降低 40%",
+    "hero.headline": "短等待。长忠诚。",
+    "hero.subhead": "为每一位顾客带来零接触、实时的排队体验 — 实时位置更新、自动 Telegram 提醒、即时广播通知，让等待时光成为您品牌中更平静、更专业的一刻。",
+    "hero.cta.buy": "启动我的排队系统 — RM25/月",
+    "hero.cta.demo": "2 分钟看懂它如何运作",
+    "hero.trust": "RM25/月 · 30 天退款保证 · 100+ 商家信赖 · 随时取消",
+    "hero.benefit1": "通过 Telegram 零接触签到 — 无需下载任何应用",
+    "hero.benefit2": "实时位置让顾客安心、清楚自己的进度",
+    "hero.benefit3": "感知等待时间减少 40% — 大幅减少“还要多久？”的询问",
     
     // Metrics
     "metrics.waitTime": "减少等候时间",
