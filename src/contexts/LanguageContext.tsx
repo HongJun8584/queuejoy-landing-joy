@@ -559,8 +559,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Counter
     "counter.badge": "Sistem Barisan Pintar",
-    "counter.title": "Panel Kaunter",
-    "counter.subtitle": "Lihat dikeluarkan terakhir, sedang dihidangkan, seterusnya. Berikan kemas kini masa nyata ke halaman pelanggan.",
+    "counter.title": "Pusat kawalan kakitangan — tenang, pantas, terkawal",
+    "counter.subtitle": "Pasukan anda mengurus seluruh giliran dari satu panel bersih. Satu ketik untuk memanggil pelanggan seterusnya, sinkronisasi serta-merta ke setiap skrin, dan tiada lagi soalan “siapa seterusnya?” yang berulang.",
     "counter.feature1.title": "Panggil Seterusnya Satu Ketik",
     "counter.feature1.desc": "Panggil pelanggan seterusnya serta-merta dengan satu ketikan",
     "counter.feature2.title": "Penyelarasan Masa Nyata",
