@@ -20,14 +20,14 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.contact": "Contact",
     
     // Hero
-    "hero.headline": "Short Waits, Long Loyalty",
-    "hero.subhead": "No app — works with Telegram. Setup in under 3 minutes.",
-    "hero.cta.buy": "Buy Now - RM25/month",
-    "hero.cta.demo": "Watch 2-min demo",
-    "hero.trust": "RM25/month · 30-day money-back · 100+ businesses · Cancel anytime",
-    "hero.benefit1": "No app install — instant Telegram DMs",
-    "hero.benefit2": "One-tap service — less confusion",
-    "hero.benefit3": "Real-time position — 40% less wait",
+    "hero.headline": "Short Waits. Long Loyalty.",
+    "hero.subhead": "Give every customer a zero-contact, real-time queue experience — live position updates, automatic Telegram alerts, and instant announcements that turn waiting into a calmer, more professional moment for your brand.",
+    "hero.cta.buy": "Start My Queue System — RM25/month",
+    "hero.cta.demo": "See it work in 2 minutes",
+    "hero.trust": "RM25/month · 30-day money-back · Trusted by 100+ businesses · Cancel anytime",
+    "hero.benefit1": "Zero-contact check-in via Telegram — no app to install",
+    "hero.benefit2": "Live position keeps customers calm and informed",
+    "hero.benefit3": "40% less perceived wait — fewer “how long?” questions",
     
     // Metrics
     "metrics.waitTime": "Reduce wait time",
@@ -36,13 +36,13 @@ const translations: Record<Language, Record<string, string>> = {
     "metrics.price": "Per month only",
     
     // Demo
-    "demo.videoTitle": "Watch How QueueJoy Works",
-    "demo.videoSubtitle": "See the magic in action — 2 minutes that'll change how you think about queues",
-    "demo.clickToWatch": "Click to watch demo",
-    "demo.liveDemo": "Try Live Demo",
-    "demo.badge": "Try It Now",
-    "demo.title": "Interactive Live Demo",
-    "demo.subtitle": "Experience QueueJoy's queue management in action",
+    "demo.videoTitle": "Watch the full QueueJoy workflow in 2 minutes",
+    "demo.videoSubtitle": "From customer check-in to staff control to live announcements — see the entire experience your business and your customers will get.",
+    "demo.clickToWatch": "Play the product story",
+    "demo.liveDemo": "Try the live demo",
+    "demo.badge": "Experience it first",
+    "demo.title": "Experience QueueJoy like a real customer",
+    "demo.subtitle": "Try the exact queue flow your customers will see — join the queue, watch your position update live, and feel how calm and professional the experience is. No signup, no setup, no risk.",
     "demo.customerView": "Customer View",
     "demo.staffView": "Staff View",
     "demo.welcome": "Welcome",
@@ -92,8 +92,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Counter
     "counter.badge": "Smart Queue System",
-    "counter.title": "The Counter Panel",
-    "counter.subtitle": "See last issued, now serving, next up. Give live update to the customer page.",
+    "counter.title": "The staff control center — calm, fast, in control",
+    "counter.subtitle": "Your team manages the entire queue from one clean panel. One tap to call the next customer, instant sync to every screen, and zero repetitive “who’s next?” questions on the floor.",
     "counter.feature1.title": "One-tap Call Next",
     "counter.feature1.desc": "Call the next customer instantly through one-tap",
     "counter.feature2.title": "Real-time Sync",
@@ -130,8 +130,8 @@ const translations: Record<Language, Record<string, string>> = {
     "admin.liveDemo": "Live Demo",
     
     // Comparison
-    "comparison.title": "Industries — real results, fast wins",
-    "comparison.subtitle": "Turn waiting from a liability into an advantage",
+    "comparison.title": "Built for every business where waiting matters",
+    "comparison.subtitle": "Salons, clinics, restaurants, workshops, service counters — see the exact moments QueueJoy turns waiting into a smoother, more loyal experience.",
     "comparison.description": "See the difference QueueJoy makes across industries",
     "comparison.old": "Old Way",
     "comparison.new": "QueueJoy Way",
@@ -188,8 +188,8 @@ const translations: Record<Language, Record<string, string>> = {
     "howitworks.step3.desc": "Telegram DM or audio call",
     
     // Pricing
-    "pricing.title": "Simple, Transparent Pricing",
-    "pricing.subtitle": "Everything you need to manage queues professionally",
+    "pricing.title": "One simple plan. Everything included.",
+    "pricing.subtitle": "No tiers, no upsells, no surprises. One predictable monthly price — every feature, every counter, every customer.",
     "pricing.features": "Features",
     "pricing.others": "Others",
     "pricing.badge": "Best Value",
@@ -230,8 +230,8 @@ const translations: Record<Language, Record<string, string>> = {
     "faq.a6": "Most businesses are live within 3 minutes. Just subscribe, create your site, and start.",
     
     // Contact
-    "contact.title": "Get in touch",
-    "contact.subtitle": "Have questions? Want a custom setup? Contact us.",
+    "contact.title": "Talk to a human — we’ll help you get live fast",
+    "contact.subtitle": "Tell us about your business. We’ll reply within one business day with a personalized setup plan — no pressure, no sales script.",
     "contact.name": "Your name",
     "contact.business": "Your business",
     "contact.email": "Your email",
@@ -241,7 +241,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.trustedDesc": "Uses secure Firebase backend. All secrets are kept server-side. Your data is protected.",
     
     // Footer
-    "footer.tagline": "Smart queue management for modern businesses",
+    "footer.tagline": "The customer experience platform that turns waiting into loyalty.",
     "footer.links": "Resources",
     "footer.documentation": "Documentation",
     "footer.legal": "Legal",
@@ -408,14 +408,14 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.contact": "Hubungi",
     
     // Hero
-    "hero.headline": "Menunggu Singkat, Kesetiaan Lama",
-    "hero.subhead": "Tiada aplikasi — berfungsi dengan Telegram. Sediakan dalam masa kurang 3 minit.",
-    "hero.cta.buy": "Beli Sekarang - RM25/bulan",
-    "hero.cta.demo": "Tonton demo 2 minit",
-    "hero.trust": "RM25/bulan · Jaminan wang kembali 30 hari · 100+ perniagaan · Batal bila-bila masa",
-    "hero.benefit1": "Tiada pemasangan aplikasi — DMs Telegram serta-merta",
-    "hero.benefit2": "Perkhidmatan satu ketik — kurang kekeliruan",
-    "hero.benefit3": "Status posisi masa nyata — kurangkan masa menunggu 40%",
+    "hero.headline": "Menunggu Singkat. Kesetiaan Panjang.",
+    "hero.subhead": "Beri setiap pelanggan pengalaman beratur tanpa sentuh dan masa nyata — kemas kini kedudukan langsung, amaran Telegram automatik dan pengumuman segera yang menjadikan masa menunggu lebih tenang dan profesional untuk jenama anda.",
+    "hero.cta.buy": "Mulakan Sistem Giliran Saya — RM25/bulan",
+    "hero.cta.demo": "Lihat ia berfungsi dalam 2 minit",
+    "hero.trust": "RM25/bulan · Jaminan wang dikembalikan 30 hari · Dipercayai 100+ perniagaan · Batal bila-bila masa",
+    "hero.benefit1": "Daftar masuk tanpa sentuh melalui Telegram — tiada aplikasi diperlukan",
+    "hero.benefit2": "Kedudukan langsung membuatkan pelanggan tenang dan dimaklumkan",
+    "hero.benefit3": "40% kurang rasa menunggu — kurang soalan “berapa lama lagi?”",
     
     // Metrics
     "metrics.waitTime": "Kurangkan masa menunggu",
@@ -424,13 +424,13 @@ const translations: Record<Language, Record<string, string>> = {
     "metrics.price": "Hanya sebulan",
     
     // Demo
-    "demo.videoTitle": "Tonton Cara QueueJoy Berfungsi",
-    "demo.videoSubtitle": "Lihat demo tindakan — 2 minit yang akan mengubah cara anda melihat barisan",
-    "demo.clickToWatch": "Klik untuk tonton demo",
-    "demo.liveDemo": "Cuba Demo Langsung",
-    "demo.badge": "Cuba Sekarang",
-    "demo.title": "Demo Interaktif Masa Nyata",
-    "demo.subtitle": "Rasai pengurusan barisan QueueJoy secara langsung",
+    "demo.videoTitle": "Tonton seluruh aliran QueueJoy dalam 2 minit",
+    "demo.videoSubtitle": "Dari daftar masuk pelanggan hingga kawalan kakitangan dan pengumuman langsung — lihat keseluruhan pengalaman yang akan diperoleh perniagaan dan pelanggan anda.",
+    "demo.clickToWatch": "Mainkan kisah produk",
+    "demo.liveDemo": "Cuba demo langsung",
+    "demo.badge": "Rasai terlebih dahulu",
+    "demo.title": "Rasai QueueJoy seperti pelanggan sebenar",
+    "demo.subtitle": "Cuba aliran giliran yang sama akan dilihat pelanggan anda — sertai giliran, lihat kedudukan dikemas kini secara langsung, dan rasai betapa tenangnya pengalaman ini. Tiada pendaftaran, tiada pemasangan, tiada risiko.",
     "demo.customerView": "Pandangan Pelanggan",
     "demo.staffView": "Pandangan Kakitangan",
     "demo.welcome": "Selamat Datang",
@@ -457,8 +457,8 @@ const translations: Record<Language, Record<string, string>> = {
     "sticky.admin": "Papan Pemuka Pentadbir",
     
     // Comparison
-    "comparison.title": "Industri — hasil sebenar, kemenangan cepat",
-    "comparison.subtitle": "Ubah menunggu dari liabiliti kepada kelebihan",
+    "comparison.title": "Dibina untuk setiap perniagaan yang melayan pelanggan menunggu",
+    "comparison.subtitle": "Salun, klinik, restoran, bengkel, kaunter perkhidmatan — lihat saat tepat QueueJoy mengubah menunggu menjadi pengalaman yang lebih lancar dan setia.",
     "comparison.description": "Lihat perbezaan QueueJoy mengikut industri",
     "comparison.old": "Cara Lama",
     "comparison.new": "Cara QueueJoy",
@@ -509,7 +509,7 @@ const translations: Record<Language, Record<string, string>> = {
     "faq.a6": "Kebanyakan perniagaan hidup dalam 3 minit. Hanya langgan, cipta laman anda, dan mulakan.",
     
     // Footer
-    "footer.tagline": "Pengurusan barisan pintar untuk perniagaan moden",
+    "footer.tagline": "Platform pengalaman pelanggan yang mengubah masa menunggu menjadi kesetiaan.",
     "footer.links": "Sumber",
     "footer.documentation": "Dokumentasi",
     "footer.legal": "Undang-undang",
@@ -559,8 +559,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Counter
     "counter.badge": "Sistem Barisan Pintar",
-    "counter.title": "Panel Kaunter",
-    "counter.subtitle": "Lihat dikeluarkan terakhir, sedang dihidangkan, seterusnya. Berikan kemas kini masa nyata ke halaman pelanggan.",
+    "counter.title": "Pusat kawalan kakitangan — tenang, pantas, terkawal",
+    "counter.subtitle": "Pasukan anda mengurus seluruh giliran dari satu panel bersih. Satu ketik untuk memanggil pelanggan seterusnya, sinkronisasi serta-merta ke setiap skrin, dan tiada lagi soalan “siapa seterusnya?” yang berulang.",
     "counter.feature1.title": "Panggil Seterusnya Satu Ketik",
     "counter.feature1.desc": "Panggil pelanggan seterusnya serta-merta dengan satu ketikan",
     "counter.feature2.title": "Penyelarasan Masa Nyata",
@@ -592,8 +592,8 @@ const translations: Record<Language, Record<string, string>> = {
     "admin.liveDemo": "Demo Langsung",
     
     // Pricing
-    "pricing.title": "Harga Mudah & Telus",
-    "pricing.subtitle": "Segala yang anda perlukan untuk mengurus barisan secara profesional",
+    "pricing.title": "Satu pelan mudah. Semuanya termasuk.",
+    "pricing.subtitle": "Tiada peringkat, tiada jualan tambahan, tiada kejutan. Satu harga bulanan yang boleh diramal — setiap ciri, setiap kaunter, setiap pelanggan.",
     "pricing.features": "Ciri",
     "pricing.others": "Lain-lain",
     "pricing.badge": "Nilai Terbaik",
@@ -640,8 +640,8 @@ const translations: Record<Language, Record<string, string>> = {
     "howitworks.step3.desc": "DM Telegram atau panggilan audio",
     
     // Contact
-    "contact.title": "Hubungi Kami",
-    "contact.subtitle": "Ada soalan? Mahu tetapan khusus? Hubungi kami.",
+    "contact.title": "Bercakap dengan manusia sebenar — kami bantu anda mulakan dengan cepat",
+    "contact.subtitle": "Beritahu kami tentang perniagaan anda. Kami akan balas dalam satu hari bekerja dengan pelan persediaan peribadi — tanpa tekanan, tanpa skrip jualan.",
     "contact.name": "Nama anda",
     "contact.business": "Nama perniagaan anda",
     "contact.email": "Emel anda",
@@ -786,14 +786,14 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.contact": "联系我们",
     
     // Hero
-    "hero.headline": "短等待，长回头",
-    "hero.subhead": "无需安装应用 — 与 Telegram 配合使用。3分钟内完成设置。",
-    "hero.cta.buy": "立即购买 - RM25/月",
-    "hero.cta.demo": "观看 2 分钟演示",
-    "hero.trust": "RM25/月 · 30 天退款保证 · 100+ 商家 · 随时取消",
-    "hero.benefit1": "无需安装任何应用 — 即刻收到 Telegram 私信",
-    "hero.benefit2": "一键服务 — 更少混乱",
-    "hero.benefit3": "实时排队状态 — 等候时间降低 40%",
+    "hero.headline": "短等待。长忠诚。",
+    "hero.subhead": "为每一位顾客带来零接触、实时的排队体验 — 实时位置更新、自动 Telegram 提醒、即时广播通知，让等待时光成为您品牌中更平静、更专业的一刻。",
+    "hero.cta.buy": "启动我的排队系统 — RM25/月",
+    "hero.cta.demo": "2 分钟看懂它如何运作",
+    "hero.trust": "RM25/月 · 30 天退款保证 · 100+ 商家信赖 · 随时取消",
+    "hero.benefit1": "通过 Telegram 零接触签到 — 无需下载任何应用",
+    "hero.benefit2": "实时位置让顾客安心、清楚自己的进度",
+    "hero.benefit3": "感知等待时间减少 40% — 大幅减少“还要多久？”的询问",
     
     // Metrics
     "metrics.waitTime": "减少等候时间",
@@ -802,13 +802,13 @@ const translations: Record<Language, Record<string, string>> = {
     "metrics.price": "每月仅需",
     
     // Demo
-    "demo.videoTitle": "观看 QueueJoy 工作原理",
-    "demo.videoSubtitle": "观看实操 — 2 分钟改变你对排队的看法",
-    "demo.clickToWatch": "点击观看演示",
+    "demo.videoTitle": "2 分钟看完 QueueJoy 的完整使用流程",
+    "demo.videoSubtitle": "从顾客签到、员工操作到实时广播 — 一次看清您的商家与顾客将获得的完整体验。",
+    "demo.clickToWatch": "播放产品故事",
     "demo.liveDemo": "试用实时演示",
-    "demo.badge": "立即体验",
-    "demo.title": "交互式实时演示",
-    "demo.subtitle": "体验 QueueJoy 的排队管理实况",
+    "demo.badge": "先体验再决定",
+    "demo.title": "像真实顾客一样体验 QueueJoy",
+    "demo.subtitle": "亲自尝试顾客将看到的完整排队流程 — 加入队列、看着位置实时更新，感受这份从容与专业。无需注册、无需安装、零风险。",
     "demo.customerView": "客户端视图",
     "demo.staffView": "员工视图",
     "demo.welcome": "欢迎",
@@ -835,8 +835,8 @@ const translations: Record<Language, Record<string, string>> = {
     "sticky.admin": "管理仪表板",
     
     // Comparison
-    "comparison.title": "行业案例 — 真实效果，快速见效",
-    "comparison.subtitle": "把等待从负担变为机会",
+    "comparison.title": "为每一个有“等待”的生意而打造",
+    "comparison.subtitle": "美发店、诊所、餐厅、维修店、服务柜台 — 看看 QueueJoy 如何把等待变成更顺畅、更让人愿意再回来的体验。",
     "comparison.description": "看看 QueueJoy 在各行业的差别",
     "comparison.old": "旧方式",
     "comparison.new": "QueueJoy 方式",
@@ -887,7 +887,7 @@ const translations: Record<Language, Record<string, string>> = {
     "faq.a6": "大多数企业在3分钟内上线。只需订阅，创建您的网站，然后开始。",
     
     // Footer
-    "footer.tagline": "面向现代商家的智能排队管理",
+    "footer.tagline": "把等待变成忠诚的顾客体验平台。",
     "footer.links": "资源",
     "footer.documentation": "文档",
     "footer.legal": "法律",
@@ -937,8 +937,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Counter
     "counter.badge": "智能排队系统",
-    "counter.title": "柜台面板",
-    "counter.subtitle": "查看上次出票、当前服务、下一个。向用户页面实时推送更新。",
+    "counter.title": "员工操作中心 — 从容、迅速、尽在掌握",
+    "counter.subtitle": "您的团队从一个清爽的面板管理整条队列。一键叫下一位、所有屏幕实时同步，让“下一位是谁？”这类重复问题消失在门店里。",
     "counter.feature1.title": "一键呼叫下一位",
     "counter.feature1.desc": "通过一键操作立即呼叫下一位顾客",
     "counter.feature2.title": "实时同步",
@@ -970,8 +970,8 @@ const translations: Record<Language, Record<string, string>> = {
     "admin.liveDemo": "实时演示",
     
     // Pricing
-    "pricing.title": "简单透明的定价",
-    "pricing.subtitle": "专业排队管理所需的一切",
+    "pricing.title": "一个简单的方案，全部功能包含在内。",
+    "pricing.subtitle": "没有套餐分级，没有附加销售，没有意外。一个可预测的月费 — 全部功能、所有柜台、每一位顾客都涵盖。",
     "pricing.features": "功能",
     "pricing.others": "其他",
     "pricing.badge": "最划算",
@@ -1018,8 +1018,8 @@ const translations: Record<Language, Record<string, string>> = {
     "howitworks.step3.desc": "Telegram 私信或语音播报",
     
     // Contact
-    "contact.title": "联系我们",
-    "contact.subtitle": "有问题？需要定制化设置？联系我们。",
+    "contact.title": "和真人聊聊 — 我们帮您快速上线",
+    "contact.subtitle": "告诉我们您的生意。一个工作日内回复，并附上专属的上线方案 — 没有压力，没有销售话术。",
     "contact.name": "你的名字",
     "contact.business": "你的商家名称",
     "contact.email": "电子邮件",
