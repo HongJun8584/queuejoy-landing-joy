@@ -1018,8 +1018,8 @@ const translations: Record<Language, Record<string, string>> = {
     "howitworks.step3.desc": "Telegram 私信或语音播报",
     
     // Contact
-    "contact.title": "联系我们",
-    "contact.subtitle": "有问题？需要定制化设置？联系我们。",
+    "contact.title": "和真人聊聊 — 我们帮您快速上线",
+    "contact.subtitle": "告诉我们您的生意。一个工作日内回复，并附上专属的上线方案 — 没有压力，没有销售话术。",
     "contact.name": "你的名字",
     "contact.business": "你的商家名称",
     "contact.email": "电子邮件",
