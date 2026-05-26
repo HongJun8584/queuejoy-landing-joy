@@ -509,7 +509,7 @@ const translations: Record<Language, Record<string, string>> = {
     "faq.a6": "Kebanyakan perniagaan hidup dalam 3 minit. Hanya langgan, cipta laman anda, dan mulakan.",
     
     // Footer
-    "footer.tagline": "Pengurusan barisan pintar untuk perniagaan moden",
+    "footer.tagline": "Platform pengalaman pelanggan yang mengubah masa menunggu menjadi kesetiaan.",
     "footer.links": "Sumber",
     "footer.documentation": "Dokumentasi",
     "footer.legal": "Undang-undang",
