@@ -640,8 +640,8 @@ const translations: Record<Language, Record<string, string>> = {
     "howitworks.step3.desc": "DM Telegram atau panggilan audio",
     
     // Contact
-    "contact.title": "Hubungi Kami",
-    "contact.subtitle": "Ada soalan? Mahu tetapan khusus? Hubungi kami.",
+    "contact.title": "Bercakap dengan manusia sebenar — kami bantu anda mulakan dengan cepat",
+    "contact.subtitle": "Beritahu kami tentang perniagaan anda. Kami akan balas dalam satu hari bekerja dengan pelan persediaan peribadi — tanpa tekanan, tanpa skrip jualan.",
     "contact.name": "Nama anda",
     "contact.business": "Nama perniagaan anda",
     "contact.email": "Emel anda",
