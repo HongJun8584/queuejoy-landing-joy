@@ -835,8 +835,8 @@ const translations: Record<Language, Record<string, string>> = {
     "sticky.admin": "管理仪表板",
     
     // Comparison
-    "comparison.title": "行业案例 — 真实效果，快速见效",
-    "comparison.subtitle": "把等待从负担变为机会",
+    "comparison.title": "为每一个有“等待”的生意而打造",
+    "comparison.subtitle": "美发店、诊所、餐厅、维修店、服务柜台 — 看看 QueueJoy 如何把等待变成更顺畅、更让人愿意再回来的体验。",
     "comparison.description": "看看 QueueJoy 在各行业的差别",
     "comparison.old": "旧方式",
     "comparison.new": "QueueJoy 方式",
