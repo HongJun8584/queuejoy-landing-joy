@@ -937,8 +937,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Counter
     "counter.badge": "智能排队系统",
-    "counter.title": "柜台面板",
-    "counter.subtitle": "查看上次出票、当前服务、下一个。向用户页面实时推送更新。",
+    "counter.title": "员工操作中心 — 从容、迅速、尽在掌握",
+    "counter.subtitle": "您的团队从一个清爽的面板管理整条队列。一键叫下一位、所有屏幕实时同步，让“下一位是谁？”这类重复问题消失在门店里。",
     "counter.feature1.title": "一键呼叫下一位",
     "counter.feature1.desc": "通过一键操作立即呼叫下一位顾客",
     "counter.feature2.title": "实时同步",
