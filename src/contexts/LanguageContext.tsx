@@ -92,8 +92,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Counter
     "counter.badge": "Smart Queue System",
-    "counter.title": "The Counter Panel",
-    "counter.subtitle": "See last issued, now serving, next up. Give live update to the customer page.",
+    "counter.title": "The staff control center — calm, fast, in control",
+    "counter.subtitle": "Your team manages the entire queue from one clean panel. One tap to call the next customer, instant sync to every screen, and zero repetitive “who’s next?” questions on the floor.",
     "counter.feature1.title": "One-tap Call Next",
     "counter.feature1.desc": "Call the next customer instantly through one-tap",
     "counter.feature2.title": "Real-time Sync",
