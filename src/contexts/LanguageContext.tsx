@@ -592,8 +592,8 @@ const translations: Record<Language, Record<string, string>> = {
     "admin.liveDemo": "Demo Langsung",
     
     // Pricing
-    "pricing.title": "Harga Mudah & Telus",
-    "pricing.subtitle": "Segala yang anda perlukan untuk mengurus barisan secara profesional",
+    "pricing.title": "Satu pelan mudah. Semuanya termasuk.",
+    "pricing.subtitle": "Tiada peringkat, tiada jualan tambahan, tiada kejutan. Satu harga bulanan yang boleh diramal — setiap ciri, setiap kaunter, setiap pelanggan.",
     "pricing.features": "Ciri",
     "pricing.others": "Lain-lain",
     "pricing.badge": "Nilai Terbaik",
