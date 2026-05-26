@@ -55,10 +55,11 @@ const StripeSuccess = () => {
   const { t } = useLanguage();
   const sessionId = searchParams.get("session_id");
 
-  const [status, setStatus] = useState<"form" | "submitting" | "success" | "error">("form");
+  const [status, setStatus] = useState<"form" | "submitting" | "tutorial" | "success" | "error">("form");
   const [slug, setSlug] = useState("");
   const [businessName, setBusinessName] = useState("");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [links, setLinks] = useState<TenantLinks | null>(null);
 
@@ -98,8 +99,13 @@ const StripeSuccess = () => {
       return;
     }
 
-    if (!slug || !businessName) {
+    if (!slug || !businessName || !email || !password) {
       setErrorMessage(t("success.error.required"));
+      return;
+    }
+
+    if (password.length < 6) {
+      setErrorMessage(t("success.error.password"));
       return;
     }
 
@@ -126,7 +132,8 @@ const StripeSuccess = () => {
         },
         body: JSON.stringify({
           businessName,
-          email: email || undefined,
+          email,
+          password,
           desiredSlug: cleanSlug,
           plan: "monthly_myr_25",
           purchaseInfo: { stripeSessionId: sessionId, idempotencyKey },
@@ -168,7 +175,7 @@ const StripeSuccess = () => {
       };
 
       setLinks(resolvedLinks);
-      setStatus("success");
+      setStatus("tutorial");
 
       try {
         sessionStorage.setItem(
@@ -269,10 +276,7 @@ const StripeSuccess = () => {
               </div>
 
               <div>
-                <Label htmlFor="email" className="text-base">
-                  {t("success.form.email")}{" "}
-                  <span className="text-muted-foreground text-sm">{t("success.form.emailOptional")}</span>
-                </Label>
+                <Label htmlFor="email" className="text-base">{t("success.form.email")}</Label>
                 <Input
                   id="email"
                   type="email"
@@ -280,9 +284,26 @@ const StripeSuccess = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={t("success.form.emailPlaceholder")}
                   className="mt-2"
+                  required
                   maxLength={120}
                 />
                 <p className="text-sm text-muted-foreground mt-1">{t("success.form.emailHelp")}</p>
+              </div>
+
+              <div>
+                <Label htmlFor="password" className="text-base">{t("success.form.password")}</Label>
+                <Input
+                  id="password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder={t("success.form.passwordPlaceholder")}
+                  className="mt-2"
+                  required
+                  minLength={6}
+                  maxLength={120}
+                />
+                <p className="text-sm text-muted-foreground mt-1">{t("success.form.passwordHelp")}</p>
               </div>
 
               <div>
@@ -308,7 +329,7 @@ const StripeSuccess = () => {
                 </div>
               )}
 
-              <Button type="submit" variant="hero" size="lg" className="w-full" disabled={!slug || !businessName}>
+              <Button type="submit" variant="hero" size="lg" className="w-full" disabled={!slug || !businessName || !email || !password}>
                 {t("success.form.submit")}
               </Button>
             </form>
@@ -330,6 +351,35 @@ const StripeSuccess = () => {
               <li>{t("success.submitting.s4")}</li>
               <li>{t("success.submitting.s5")}</li>
             </ul>
+          </div>
+        )}
+
+        {status === "tutorial" && links && (
+          <div className="bg-card p-6 sm:p-8 rounded-2xl shadow-card border border-border">
+            <div className="text-center mb-6">
+              <h1 className="text-2xl sm:text-3xl font-bold mb-2">{t("success.tutorial.title")}</h1>
+              <p className="text-muted-foreground">{t("success.tutorial.subtitle")}</p>
+            </div>
+            <div className="relative w-full overflow-hidden rounded-xl border border-border bg-black aspect-video mb-6">
+              <video
+                src="/client_tutorial.mp4"
+                poster="/client_tutorial.avif"
+                controls
+                playsInline
+                preload="metadata"
+                className="absolute inset-0 w-full h-full object-cover"
+                onEnded={() => {/* gentle hint only */}}
+              />
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button variant="hero" size="lg" className="w-full" onClick={() => setStatus("success")}>
+                {t("success.tutorial.continue")}
+              </Button>
+              <Button variant="outline" size="lg" className="w-full" onClick={() => setStatus("success")}>
+                {t("success.tutorial.skip")}
+              </Button>
+            </div>
+            <p className="text-xs text-muted-foreground text-center mt-4">{t("success.tutorial.note")}</p>
           </div>
         )}
 
