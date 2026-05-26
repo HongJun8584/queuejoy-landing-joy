@@ -230,8 +230,8 @@ const translations: Record<Language, Record<string, string>> = {
     "faq.a6": "Most businesses are live within 3 minutes. Just subscribe, create your site, and start.",
     
     // Contact
-    "contact.title": "Get in touch",
-    "contact.subtitle": "Have questions? Want a custom setup? Contact us.",
+    "contact.title": "Talk to a human — we’ll help you get live fast",
+    "contact.subtitle": "Tell us about your business. We’ll reply within one business day with a personalized setup plan — no pressure, no sales script.",
     "contact.name": "Your name",
     "contact.business": "Your business",
     "contact.email": "Your email",
