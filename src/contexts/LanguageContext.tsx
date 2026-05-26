@@ -970,8 +970,8 @@ const translations: Record<Language, Record<string, string>> = {
     "admin.liveDemo": "实时演示",
     
     // Pricing
-    "pricing.title": "简单透明的定价",
-    "pricing.subtitle": "专业排队管理所需的一切",
+    "pricing.title": "一个简单的方案，全部功能包含在内。",
+    "pricing.subtitle": "没有套餐分级，没有附加销售，没有意外。一个可预测的月费 — 全部功能、所有柜台、每一位顾客都涵盖。",
     "pricing.features": "功能",
     "pricing.others": "其他",
     "pricing.badge": "最划算",
