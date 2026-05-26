@@ -188,8 +188,8 @@ const translations: Record<Language, Record<string, string>> = {
     "howitworks.step3.desc": "Telegram DM or audio call",
     
     // Pricing
-    "pricing.title": "Simple, Transparent Pricing",
-    "pricing.subtitle": "Everything you need to manage queues professionally",
+    "pricing.title": "One simple plan. Everything included.",
+    "pricing.subtitle": "No tiers, no upsells, no surprises. One predictable monthly price — every feature, every counter, every customer.",
     "pricing.features": "Features",
     "pricing.others": "Others",
     "pricing.badge": "Best Value",
