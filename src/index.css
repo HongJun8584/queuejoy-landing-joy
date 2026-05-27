@@ -165,6 +165,58 @@ All colors MUST be HSL.
   .shadow-card {
     box-shadow: var(--shadow-card);
   }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .bg-mesh {
+    background-image: var(--gradient-mesh);
+  }
+
+  /* Glassmorphism surface — premium card depth */
+  .glass {
+    background: hsl(0 0% 100% / 0.7);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid hsl(240 20% 100% / 0.6);
+  }
+
+  .glass-strong {
+    background: hsl(0 0% 100% / 0.85);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid hsl(240 20% 100% / 0.8);
+  }
+
+  /* Scroll-activated text highlight */
+  .scroll-highlight {
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position: 0 100%;
+    transition: background-size 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+                color 0.4s ease;
+    padding: 0 0.05em;
+    border-radius: 2px;
+  }
+  .scroll-highlight.is-active {
+    background-size: 100% 100%;
+  }
+  .scroll-highlight[data-highlight="background"] {
+    background-image: var(--highlight-bg);
+  }
+  .scroll-highlight[data-highlight="half"] {
+    background-image: linear-gradient(
+      transparent 55%,
+      hsl(245 70% 56% / 0.22) 55%
+    );
+  }
+  .scroll-highlight[data-highlight="underline"] {
+    background-image: linear-gradient(
+      transparent calc(100% - 0.18em),
+      var(--highlight-underline) calc(100% - 0.18em)
+    );
+  }
   
   .animate-fade-up {
     animation: fadeUp 0.6s ease-out forwards;
