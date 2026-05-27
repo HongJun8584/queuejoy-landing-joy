@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Play, Shield, Zap, MessageCircle } from "lucide-react";
 import heroPhoneMockup from "@/assets/hero-phone-mockup.png";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { ScrollHighlight } from "./ScrollHighlight";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -18,16 +19,25 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-accent/10 pt-20">
-      <div className="container mx-auto px-4 py-12">
+    <section id="hero" className="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-background bg-mesh pt-20">
+      {/* soft gradient orbs */}
+      <div aria-hidden className="pointer-events-none absolute -top-32 -left-32 w-[28rem] h-[28rem] rounded-full bg-primary/15 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-32 -right-32 w-[32rem] h-[32rem] rounded-full bg-accent/15 blur-3xl" />
+
+      <div className="container mx-auto px-4 py-12 relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           {/* Left: Copy + CTAs */}
           <div className="text-center lg:text-left space-y-8 animate-fade-up">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
-                <span className="text-gradient">{t("hero.headline")}</span>
+            <div className="space-y-5">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-medium text-primary border border-primary/15">
+                <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
+                Live digital queue · Telegram alerts · Built for small businesses
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-[3.75rem] font-black leading-[1.05] tracking-tight">
+                Turn <ScrollHighlight variant="half">frustrating waiting lines</ScrollHighlight> into a{" "}
+                <span className="text-gradient">smooth digital experience.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 {t("hero.subhead")}
               </p>
             </div>
