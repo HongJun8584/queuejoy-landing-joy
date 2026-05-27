@@ -8,48 +8,65 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 270 50% 15%;
+    /* Premium neutral surfaces — refined off-white with subtle warmth */
+    --background: 240 20% 99%;
+    --foreground: 240 30% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 270 50% 15%;
+    --card-foreground: 240 30% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 270 50% 15%;
+    --popover-foreground: 240 30% 12%;
 
-    --primary: 270 70% 50%;
+    /* Refined indigo primary — confident, modern, trustworthy */
+    --primary: 245 70% 56%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 270 80% 65%;
+    --primary-glow: 255 85% 70%;
 
-    --secondary: 180 70% 45%;
+    /* Elegant teal accent — fresh, "live", reassuring */
+    --secondary: 184 75% 44%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 270 30% 96%;
-    --muted-foreground: 270 20% 50%;
+    --muted: 240 25% 96%;
+    --muted-foreground: 240 12% 45%;
 
-    --accent: 180 70% 45%;
+    --accent: 184 75% 44%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 270 20% 90%;
-    --input: 270 20% 90%;
-    --ring: 270 70% 50%;
+    --border: 240 20% 91%;
+    --input: 240 20% 91%;
+    --ring: 245 70% 56%;
 
-    --radius: 0.75rem;
-    
-    /* Gradients — used sparingly, only for hero/pricing/final CTA accents */
-    --gradient-primary: linear-gradient(135deg, hsl(270 70% 50%) 0%, hsl(260 70% 45%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(270 70% 50%) 0%, hsl(180 70% 45%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(270 30% 99%) 100%);
+    --radius: 0.875rem;
 
-    /* Shadows — softer, neutral-based for premium SaaS feel */
-    --shadow-primary: 0 8px 24px -8px hsl(270 70% 50% / 0.22);
-    --shadow-glow: 0 0 32px hsl(270 80% 65% / 0.28);
-    --shadow-card: 0 1px 3px hsl(220 15% 20% / 0.04), 0 6px 20px -8px hsl(220 15% 20% / 0.08);
+    /* Editorial gradients — hero / pricing / final CTA accents */
+    --gradient-primary: linear-gradient(135deg, hsl(245 70% 56%) 0%, hsl(265 75% 60%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(245 70% 56%) 0%, hsl(184 75% 44%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(240 20% 99%) 0%, hsl(245 30% 97%) 100%);
+    --gradient-mesh:
+      radial-gradient(at 20% 0%, hsl(245 70% 56% / 0.08) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(184 75% 44% / 0.06) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, hsl(265 75% 60% / 0.05) 0px, transparent 50%);
 
-    /* Transitions */
+    /* Premium layered shadows */
+    --shadow-primary: 0 10px 30px -10px hsl(245 70% 56% / 0.25);
+    --shadow-glow: 0 0 40px hsl(255 85% 70% / 0.3);
+    --shadow-card:
+      0 1px 2px hsl(240 30% 12% / 0.04),
+      0 4px 12px -2px hsl(240 30% 12% / 0.06),
+      0 12px 32px -8px hsl(240 30% 12% / 0.08);
+    --shadow-elevated:
+      0 2px 4px hsl(240 30% 12% / 0.04),
+      0 8px 20px -4px hsl(240 30% 12% / 0.08),
+      0 24px 48px -12px hsl(240 30% 12% / 0.12);
+
+    /* Scroll-highlight tokens */
+    --highlight-bg: linear-gradient(120deg, hsl(245 70% 56% / 0.18) 0%, hsl(184 75% 44% / 0.22) 100%);
+    --highlight-underline: hsl(245 70% 56%);
+
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
 
