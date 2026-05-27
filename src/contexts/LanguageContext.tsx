@@ -19,15 +19,15 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.pricing": "Pricing",
     "nav.contact": "Contact",
     
-    // Hero
-    "hero.headline": "Short Waits. Long Loyalty.",
-    "hero.subhead": "Give every customer a zero-contact, real-time queue experience — live position updates, automatic Telegram alerts, and instant announcements that turn waiting into a calmer, more professional moment for your brand.",
-    "hero.cta.buy": "Start My Queue System — RM25/month",
-    "hero.cta.demo": "See it work in 2 minutes",
-    "hero.trust": "RM25/month · 30-day money-back · Trusted by 100+ businesses · Cancel anytime",
-    "hero.benefit1": "Zero-contact check-in via Telegram — no app to install",
-    "hero.benefit2": "Live position keeps customers calm and informed",
-    "hero.benefit3": "40% less perceived wait — fewer “how long?” questions",
+    // Hero — pain → relief positioning
+    "hero.headline": "Turn frustrating waiting lines into a smooth digital experience.",
+    "hero.subhead": "QueueJoy gives salons, clinics, restaurants, cafés, barbers and service counters a live digital queue with automatic Telegram alerts — so customers wait calmly instead of standing in line asking “how long more?”",
+    "hero.cta.buy": "Start my queue system — RM25/month",
+    "hero.cta.demo": "See the 2-minute product story",
+    "hero.trust": "Trusted by real businesses · Free setup help · 30-day money-back · Cancel anytime",
+    "hero.benefit1": "Live digital queue — customers join with one tap",
+    "hero.benefit2": "Automatic Telegram alerts — no app to install",
+    "hero.benefit3": "Real-time queue status — 40% less perceived wait",
     
     // Metrics
     "metrics.waitTime": "Reduce wait time",
@@ -407,15 +407,15 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.pricing": "Harga",
     "nav.contact": "Hubungi",
     
-    // Hero
-    "hero.headline": "Menunggu Singkat. Kesetiaan Panjang.",
-    "hero.subhead": "Beri setiap pelanggan pengalaman beratur tanpa sentuh dan masa nyata — kemas kini kedudukan langsung, amaran Telegram automatik dan pengumuman segera yang menjadikan masa menunggu lebih tenang dan profesional untuk jenama anda.",
-    "hero.cta.buy": "Mulakan Sistem Giliran Saya — RM25/bulan",
-    "hero.cta.demo": "Lihat ia berfungsi dalam 2 minit",
-    "hero.trust": "RM25/bulan · Jaminan wang dikembalikan 30 hari · Dipercayai 100+ perniagaan · Batal bila-bila masa",
-    "hero.benefit1": "Daftar masuk tanpa sentuh melalui Telegram — tiada aplikasi diperlukan",
-    "hero.benefit2": "Kedudukan langsung membuatkan pelanggan tenang dan dimaklumkan",
-    "hero.benefit3": "40% kurang rasa menunggu — kurang soalan “berapa lama lagi?”",
+    // Hero — pain → relief
+    "hero.headline": "Tukar baris menunggu yang menjengkelkan kepada pengalaman digital yang lancar.",
+    "hero.subhead": "QueueJoy memberi salon, klinik, restoran, kafe, kedai gunting dan kaunter perkhidmatan satu sistem giliran digital langsung dengan amaran Telegram automatik — pelanggan menunggu dengan tenang, bukan berdiri sambil bertanya “berapa lama lagi?”",
+    "hero.cta.buy": "Mulakan sistem giliran saya — RM25/bulan",
+    "hero.cta.demo": "Tonton cerita produk 2 minit",
+    "hero.trust": "Dipercayai perniagaan sebenar · Bantuan setup percuma · Jaminan wang dikembalikan 30 hari · Batal bila-bila masa",
+    "hero.benefit1": "Giliran digital langsung — pelanggan sertai dengan satu ketuk",
+    "hero.benefit2": "Amaran Telegram automatik — tiada aplikasi diperlukan",
+    "hero.benefit3": "Status giliran masa nyata — 40% kurang rasa menunggu",
     
     // Metrics
     "metrics.waitTime": "Kurangkan masa menunggu",
