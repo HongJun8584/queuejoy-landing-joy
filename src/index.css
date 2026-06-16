@@ -18,27 +18,28 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 240 30% 12%;
 
-    /* Refined indigo primary — confident, modern, trustworthy */
-    --primary: 245 70% 56%;
+    /* QueueJoy brand purple #7B3FE4 — confident, modern, joyful */
+    --primary: 262 75% 57%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 255 85% 70%;
+    --primary-glow: 262 85% 70%;
 
-    /* Elegant teal accent — fresh, "live", reassuring */
-    --secondary: 184 75% 44%;
+    /* Bright teal #2ED6C9 — live, fresh, reassuring */
+    --secondary: 175 67% 51%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 25% 96%;
-    --muted-foreground: 240 12% 45%;
+    --muted: 260 25% 96%;
+    --muted-foreground: 260 12% 45%;
 
-    --accent: 184 75% 44%;
-    --accent-foreground: 0 0% 100%;
+    /* Warm yellow #FFD447 — sparingly, for warmth & emphasis */
+    --accent: 46 100% 64%;
+    --accent-foreground: 260 30% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 20% 91%;
-    --input: 240 20% 91%;
-    --ring: 245 70% 56%;
+    --border: 260 20% 91%;
+    --input: 260 20% 91%;
+    --ring: 262 75% 57%;
 
     --radius: 0.875rem;
 
