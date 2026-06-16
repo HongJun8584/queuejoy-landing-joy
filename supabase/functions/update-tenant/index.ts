@@ -196,9 +196,49 @@ serve(async (req) => {
       updateData.settings = settings;
     }
 
-    if (logo_url !== undefined) {
-      updateData.logo_url = logo_url;
+    let finalLogoUrl = logo_url;
+
+    // Handle server-side logo upload (base64) — clients can no longer upload directly
+    if (logo_upload && typeof logo_upload === 'object') {
+      const { data_base64, content_type, ext } = logo_upload as {
+        data_base64?: string; content_type?: string; ext?: string;
+      };
+      const allowedTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/svg+xml'];
+      const allowedExts = ['png', 'jpg', 'jpeg', 'webp', 'svg'];
+      if (!data_base64 || !content_type || !ext ||
+          !allowedTypes.includes(content_type) ||
+          !allowedExts.includes(ext.toLowerCase())) {
+        return new Response(
+          JSON.stringify({ error: 'Invalid logo upload' }),
+          { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
+        );
+      }
+      const bytes = Uint8Array.from(atob(data_base64), c => c.charCodeAt(0));
+      if (bytes.byteLength > 2 * 1024 * 1024) {
+        return new Response(
+          JSON.stringify({ error: 'Logo too large' }),
+          { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
+        );
+      }
+      const fileName = `${slug}-${Date.now()}.${ext.toLowerCase()}`;
+      const { error: upErr } = await supabase.storage
+        .from('tenant-logos')
+        .upload(fileName, bytes, { contentType: content_type, upsert: false });
+      if (upErr) {
+        logger.error('Logo upload failed', { slug, error: upErr.message });
+        return new Response(
+          JSON.stringify({ error: 'Logo upload failed' }),
+          { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+        );
+      }
+      const { data: pub } = supabase.storage.from('tenant-logos').getPublicUrl(fileName);
+      finalLogoUrl = pub.publicUrl;
     }
+
+    if (finalLogoUrl !== undefined) {
+      updateData.logo_url = finalLogoUrl;
+    }
+
 
     const { error: updateError } = await supabase
       .from('tenants')
