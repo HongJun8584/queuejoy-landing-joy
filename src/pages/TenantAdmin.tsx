@@ -149,30 +149,23 @@ const TenantAdmin = () => {
         throw new Error('Authentication token not found');
       }
 
-      let logoUrl = tenantData?.logo_url;
+      let logoUploadPayload: { data_base64: string; content_type: string; ext: string } | undefined;
 
-      // Upload logo if selected (already validated on selection)
+      // Encode logo for server-side upload (clients can no longer write to storage directly)
       if (logoFile) {
-        // Double-check validation before upload
         const validation = validateLogoFile(logoFile);
         if (!validation.valid) {
           throw new Error(validation.error || 'Invalid logo file');
         }
-        
-        const fileExt = logoFile.name.split('.').pop()?.toLowerCase();
-        const fileName = `${slug}-${Date.now()}.${fileExt}`;
-        const { error: uploadError } = await supabase.storage
-          .from('tenant-logos')
-          .upload(fileName, logoFile);
-
-        if (uploadError) throw uploadError;
-
-        const { data: { publicUrl } } = supabase.storage
-          .from('tenant-logos')
-          .getPublicUrl(fileName);
-
-        logoUrl = publicUrl;
+        const ext = logoFile.name.split('.').pop()?.toLowerCase() || 'png';
+        const buf = await logoFile.arrayBuffer();
+        const bytes = new Uint8Array(buf);
+        let binary = '';
+        for (let i = 0; i < bytes.byteLength; i++) binary += String.fromCharCode(bytes[i]);
+        const data_base64 = btoa(binary);
+        logoUploadPayload = { data_base64, content_type: logoFile.type, ext };
       }
+
 
       // Client-side sanitization preview (server will also sanitize)
       const sanitizedSettings = {
