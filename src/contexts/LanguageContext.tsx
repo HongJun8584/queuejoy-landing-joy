@@ -20,14 +20,14 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.contact": "Contact",
     
     // Hero — pain → relief positioning
-    "hero.headline": "Turn frustrating waiting lines into a smooth digital experience.",
-    "hero.subhead": "QueueJoy gives salons, clinics, restaurants, cafés, barbers and service counters a live digital queue with automatic Telegram alerts — so customers wait calmly instead of standing in line asking “how long more?”",
-    "hero.cta.buy": "Start my queue system — RM25/month",
-    "hero.cta.demo": "See the 2-minute product story",
-    "hero.trust": "Trusted by real businesses · Free setup help · 30-day money-back · Cancel anytime",
-    "hero.benefit1": "Live digital queue — customers join with one tap",
-    "hero.benefit2": "Automatic Telegram alerts — no app to install",
-    "hero.benefit3": "Real-time queue status — 40% less perceived wait",
+    "hero.headline": "Turn waiting time into customer retention.",
+    "hero.subhead": "QueueJoy helps businesses manage queues, keep customers informed, and bring them back with direct Telegram announcements, reminders, and promotions.",
+    "hero.cta.buy": "Start Free Trial",
+    "hero.cta.demo": "Watch Demo",
+    "hero.trust": "Built for businesses with real waiting lines and repeat customers.",
+    "hero.benefit1": "Live queue updates",
+    "hero.benefit2": "Telegram connection",
+    "hero.benefit3": "Repeat customer growth",
     
     // Metrics
     "metrics.waitTime": "Reduce wait time",
