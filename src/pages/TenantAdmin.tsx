@@ -178,13 +178,14 @@ const TenantAdmin = () => {
 
       // Server-side update with authentication
       const { data, error } = await supabase.functions.invoke('update-tenant', {
-        body: { 
-          slug, 
+        body: {
+          slug,
           token: storedToken,
           settings: sanitizedSettings,
-          logo_url: logoUrl
+          logo_upload: logoUploadPayload,
         },
       });
+
 
       if (error || !data?.success) {
         throw error || new Error('Failed to save settings');
