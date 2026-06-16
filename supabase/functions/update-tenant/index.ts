@@ -98,7 +98,7 @@ serve(async (req) => {
   }
 
   try {
-    const { slug, token, settings, logo_url } = await req.json();
+    const { slug, token, settings, logo_url, logo_upload } = await req.json();
 
     if (!slug || !token) {
       return new Response(
@@ -109,6 +109,7 @@ serve(async (req) => {
         }
       );
     }
+
 
     // Validate slug format
     if (!validateSlugFormat(slug)) {
