@@ -362,13 +362,11 @@ const StripeSuccess = () => {
             </div>
             <div className="relative w-full overflow-hidden rounded-xl border border-border bg-black aspect-video mb-6">
               <video
-                src="/client_tutorial.mp4"
-                poster="/client_tutorial.avif"
+                src="/__l5e/assets-v1/b66ceb59-d391-47e4-a9c4-2c19b0f92f78/queuejoy-demo-video-1.mp4"
                 controls
                 playsInline
                 preload="metadata"
                 className="absolute inset-0 w-full h-full object-cover"
-                onEnded={() => {/* gentle hint only */}}
               />
             </div>
             <div className="flex flex-col sm:flex-row gap-3">

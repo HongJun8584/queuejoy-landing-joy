@@ -31,14 +31,14 @@ const Hero = () => {
             <div className="space-y-5">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-medium text-primary border border-primary/15">
                 <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
-                Live digital queue · Telegram alerts · Built for small businesses
+                Live queue · Telegram updates · Built for repeat customers
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-[3.75rem] font-black leading-[1.05] tracking-tight">
-                Turn <ScrollHighlight variant="half">frustrating waiting lines</ScrollHighlight> into a{" "}
-                <span className="text-gradient">smooth digital experience.</span>
+                Turn <ScrollHighlight variant="half">waiting time</ScrollHighlight> into{" "}
+                <span className="text-gradient">loyal customers.</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                {t("hero.subhead")}
+                QueueJoy helps businesses manage queues, send live updates, and bring customers back with Telegram messages. No extra app. No hard setup. Just a better way to wait.
               </p>
             </div>
 
