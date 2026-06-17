@@ -21,6 +21,7 @@ import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 import { StickyPurchasePanel } from "@/components/StickyPurchasePanel";
 import { WhyLessWaitSection } from "@/components/WhyLessWaitSection";
 import { FreeSetupHelp } from "@/components/FreeSetupHelp";
+import { FinalCTA } from "@/components/FinalCTA";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Index = () => {
