@@ -69,6 +69,7 @@ const Index = () => {
           <PricingComparison />
         </div>
         <FreeSetupHelp />
+        <FinalCTA />
         <div id="checkout">
           {/* Scroll anchor for checkout — pricing has the Stripe button */}
         </div>
