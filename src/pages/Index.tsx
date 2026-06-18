@@ -22,6 +22,7 @@ import { StickyPurchasePanel } from "@/components/StickyPurchasePanel";
 import { WhyLessWaitSection } from "@/components/WhyLessWaitSection";
 import { FreeSetupHelp } from "@/components/FreeSetupHelp";
 import { FinalCTA } from "@/components/FinalCTA";
+import { LoyaltyTelegramSection } from "@/components/LoyaltyTelegramSection";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Index = () => {
@@ -50,6 +51,7 @@ const Index = () => {
         <div id="demo">
           <DemoVideoSection />
         </div>
+        <LoyaltyTelegramSection />
         <IndustriesSlider />
         <div id="about">
           <HowItWorks />

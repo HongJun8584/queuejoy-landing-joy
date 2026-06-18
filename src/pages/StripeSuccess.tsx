@@ -383,13 +383,63 @@ const StripeSuccess = () => {
 
         {status === "success" && links && (
           <div className="space-y-6">
-            <div className="bg-card p-6 sm:p-8 rounded-2xl shadow-card border border-green-500/30 text-center">
-              <CheckCircle className="w-16 h-16 mx-auto mb-4 text-green-500" />
-              <h1 className="text-2xl sm:text-3xl font-bold mb-2 text-green-600">
-                {t("success.live.title")}
-              </h1>
-              <p className="text-muted-foreground">{t("success.live.desc")}</p>
+            <div className="relative overflow-hidden bg-card p-6 sm:p-10 rounded-3xl shadow-elevated border border-primary/15 text-center">
+              <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-primary/15 blur-3xl" />
+              <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-secondary/15 blur-3xl" />
+              <div className="relative">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/15 text-secondary text-xs font-semibold mb-4">
+                  <CheckCircle className="w-4 h-4" /> Payment confirmed
+                </div>
+                <h1 className="text-3xl sm:text-4xl font-black mb-3 tracking-tight">
+                  Welcome to <span className="text-gradient">QueueJoy</span> 🎉
+                </h1>
+                <p className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto">
+                  Your system is live. Watch the tutorial, then follow the 6-step quick start below.
+                </p>
+              </div>
             </div>
+
+            <div className="bg-card rounded-3xl shadow-card border border-border overflow-hidden">
+              <div className="aspect-video bg-black">
+                <video
+                  src="/__l5e/assets-v1/b66ceb59-d391-47e4-a9c4-2c19b0f92f78/queuejoy-demo-video-1.mp4"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-5 sm:p-6">
+                <p className="text-sm font-semibold mb-1">Start here — 60-second tutorial</p>
+                <p className="text-xs text-muted-foreground">Walks you through customer page, counter, admin, and Telegram setup.</p>
+              </div>
+            </div>
+
+            <div className="bg-card p-6 rounded-3xl shadow-card border border-border">
+              <h2 className="text-lg font-bold mb-1">Quick start — 6 steps</h2>
+              <p className="text-sm text-muted-foreground mb-5">Most businesses finish in under 5 minutes.</p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {[
+                  { n: 1, t: "Open your admin", d: "Tap below to access your dashboard." },
+                  { n: 2, t: "Set up your business", d: "Add business name and welcome text." },
+                  { n: 3, t: "Customize branding", d: "Upload your logo and colors." },
+                  { n: 4, t: "Connect Telegram", d: "Link your Telegram bot for notifications." },
+                  { n: 5, t: "Test the queue", d: "Join from your phone and call next." },
+                  { n: 6, t: "Go live", d: "Print the QR code and serve customers." },
+                ].map((s) => (
+                  <div key={s.n} className="flex gap-3 p-4 rounded-2xl bg-muted/40 border border-border/50">
+                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-secondary text-primary-foreground flex items-center justify-center font-bold text-sm flex-shrink-0">
+                      {s.n}
+                    </div>
+                    <div>
+                      <p className="font-semibold text-sm">{s.t}</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">{s.d}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
 
             <div className="bg-card p-6 rounded-2xl shadow-card border border-border">
               <h2 className="text-lg font-bold mb-4">{t("success.links.title")}</h2>
