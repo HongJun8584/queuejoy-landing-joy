@@ -203,6 +203,7 @@ const StripeSuccess = () => {
             slug: finalSlug,
             businessName,
             tenantId: data.tenantId,
+            ownerUid,
             links: resolvedLinks,
           })
         );
