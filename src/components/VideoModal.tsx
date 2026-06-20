@@ -79,11 +79,12 @@ export const VideoModal = ({ isOpen, onClose, videoSrc }: VideoModalProps) => {
         <div className="relative p-4">
           <video
             ref={setVideoElement}
-            className="w-full rounded-lg shadow-2xl border-2 border-primary/20"
+            className="w-full rounded-lg shadow-2xl border-2 border-primary/20 bg-black"
             controls
+            autoPlay
             playsInline
             preload="metadata"
-            poster="/demo/queuejoy-poster.jpg"
+            poster={poster}
           >
             <source src={videoSrc} type="video/mp4" />
             Your browser does not support the video tag.
