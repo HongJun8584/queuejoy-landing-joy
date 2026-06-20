@@ -111,8 +111,8 @@ const SectorCard = ({ sector, onExploreClick }: SectorCardProps) => {
             onLoad={() => setImageLoaded(true)}
           />
           {/* Fit badge overlay */}
-          <div className="absolute top-3 left-3 bg-primary/90 text-primary-foreground text-xs font-bold px-2 py-1 rounded-full">
-            {sector.fit}-fit
+          <div className="absolute top-3 left-3 bg-secondary/95 text-secondary-foreground text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md">
+            {sector.fit} fit
           </div>
         </div>
 
