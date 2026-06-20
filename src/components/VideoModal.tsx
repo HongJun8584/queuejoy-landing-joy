@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
-import { StripeCheckoutButton } from "./StripeCheckoutButton";
+import poster from "@/assets/demo-video-poster.jpg";
 
 interface VideoModalProps {
   isOpen: boolean;
