@@ -105,8 +105,8 @@ const StripeSuccess = () => {
       return;
     }
 
-    if (password.length < 6) {
-      setErrorMessage(t("success.error.password"));
+    if (password.length < 8) {
+      setErrorMessage("Please use a password with at least 8 characters.");
       return;
     }
 
@@ -124,6 +124,22 @@ const StripeSuccess = () => {
 
     const idempotencyKey = getOrCreateIdempotencyKey(sessionId);
 
+    // Step 1 — create a brand-new, unique Firebase Auth user for this buyer.
+    // No shared admin account. If the Firebase Web API key isn't configured,
+    // we skip this step gracefully and fall back to the legacy flow.
+    let ownerUid: string | undefined;
+    if (isFirebaseAuthConfigured()) {
+      try {
+        const fbUser = await firebaseSignUp(email, password);
+        if (fbUser) ownerUid = fbUser.uid;
+      } catch (err: any) {
+        setErrorMessage(err?.message || "Couldn't create your account.");
+        setStatus("form");
+        submittingRef.current = false;
+        return;
+      }
+    }
+
     try {
       const res = await fetch(CREATE_BUSINESS_ENDPOINT, {
         method: "POST",
@@ -135,6 +151,8 @@ const StripeSuccess = () => {
           businessName,
           email,
           password,
+          ownerUid,
+          ownerEmail: email,
           desiredSlug: cleanSlug,
           plan: "monthly_myr_25",
           purchaseInfo: { stripeSessionId: sessionId, idempotencyKey },
