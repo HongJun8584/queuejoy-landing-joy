@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { firebaseSignUp, isFirebaseAuthConfigured } from "@/lib/firebaseAuth";
 
 const NETLIFY_BASE = "https://queuejoy-live.netlify.app";
 const CREATE_BUSINESS_ENDPOINT = `${NETLIFY_BASE}/.netlify/functions/createBusiness`;
