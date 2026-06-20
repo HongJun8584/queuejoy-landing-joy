@@ -33,48 +33,48 @@ const sectors: SectorData[] = [
   {
     id: "healthcare",
     titleKey: "industries.healthcare.title",
-    fit: "High",
+    fit: "Great",
     image: healthcareImg,
-    alt: "clinic waiting area with seated patients and reception desk",
+    alt: "Calm clinic waiting area with seated patients",
     oldKeys: ["industries.healthcare.old1", "industries.healthcare.old2"],
     joyKeys: ["industries.healthcare.joy1", "industries.healthcare.joy2"],
-    chips: ["Long wait", "High frequency", "High retention"],
+    chips: ["Long waits", "Repeat visits", "Patient communication"],
     benefitKey: "industries.healthcare.benefit",
     cta: "/demo?utm_campaign=healthcare"
   },
   {
     id: "finance",
     titleKey: "industries.finance.title",
-    fit: "Medium-High",
-    image: financeImg,
-    alt: "bank counter queue with customers and staff behind glass",
+    fit: "Great",
+    image: healthcareImg,
+    alt: "Dental clinic with patient chair and bright interior",
     oldKeys: ["industries.finance.old1", "industries.finance.old2"],
     joyKeys: ["industries.finance.joy1", "industries.finance.joy2"],
-    chips: ["Long service", "High repeat interactions", "Efficiency-first"],
+    chips: ["Recall reminders", "Fewer no-shows", "Quiet waiting room"],
     benefitKey: "industries.finance.benefit",
-    cta: "/demo?utm_campaign=finance"
+    cta: "/demo?utm_campaign=dental"
   },
   {
     id: "fnb",
     titleKey: "industries.fnb.title",
-    fit: "Very High",
+    fit: "Great",
     image: fnbImg,
-    alt: "busy kopitiam or cafe counter with customers waiting to collect orders",
+    alt: "Busy cafe counter with customers waiting at peak hour",
     oldKeys: ["industries.fnb.old1", "industries.fnb.old2"],
     joyKeys: ["industries.fnb.joy1", "industries.fnb.joy2"],
-    chips: ["High frequency", "Wait 2–10 min", "Repeat revenue"],
+    chips: ["Peak hour rush", "Repeat visits", "Telegram promos"],
     benefitKey: "industries.fnb.benefit",
-    cta: "/demo?utm_campaign=fnB"
+    cta: "/demo?utm_campaign=fnb"
   },
   {
     id: "beauty",
     titleKey: "industries.beauty.title",
-    fit: "High",
+    fit: "Great",
     image: beautyImg,
-    alt: "salon waiting area with chairs and customers",
+    alt: "Beauty salon waiting area with stylist chairs",
     oldKeys: ["industries.beauty.old1", "industries.beauty.old2"],
     joyKeys: ["industries.beauty.joy1", "industries.beauty.joy2"],
-    chips: ["Appointment & walk-in mix", "Repeat spend", "High ARPU"],
+    chips: ["Walk-in + booking", "Repeat clients", "Direct rebooking"],
     benefitKey: "industries.beauty.benefit",
     cta: "/demo?utm_campaign=beauty"
   }
